@@ -1,0 +1,108 @@
+\documentclass{trkut}% Reaalkooli vormistus. Muidu "report" või "article".
+\usepackage[style=trkut]{biblatex}% Kasutatud kirjanduse genereerimine
+\addbibresource{viited_kaarel_kivisalu.bib}% Viidete info fail
+\defbibheading{bibliography}{\addchap{#1}}% Lisame kasutatud materjalid sisukorda
+
+\pealkiri{Gravitatsiooni mõju kera soojusmahtuvusele}
+\autor{Kaarel Kivisalu}
+\klass{11. a}
+\juhendaja{prof Jaan Kalda \\ õp Toomas Reimann}
+\toggletrue{mitujuhendajat}% Uncomment kui on mitu juhendajat
+
+\begin{document}
+\maketitle% Tiitelleht
+\tableofcontents% Sisukord
+\addchap{Sissejuhatus}
+\nummerdame% See käsk peab olema õigeks nummerdamiseks kohe peale sissejuhatust
+I rahvusvahelisel füüsikaolümpiaadil 1967. aastal oli järgnev probleem \cite{ipho67}:
+
+\textit{Kaks homogeenset ühesugust kera on sama algtemperatuuriga. Üks kera on liikumatult horisontaalse tasandil, teine ripub niidi küljes. Mõlemale kerale antakse võrdne soojushulk. Kas kerade lõpptemperatuur on sama või mitte. Soojuskadudega mitte arvestada.}
+
+Käesolevas töös uuritakse konkreetsete potentsiaalide korral konstantse gravitatsioonvälja mõju kera soojusmahtuvusele. Konstantse gravitatsioonivälja potentsiaal on lineaarne. Vaadatakse soojusmahtuvuse erinevust juhtudel, kui on ainult kera potentsiaal ja kera potentsiaalile on lisatud lineaarne gravitatsioonivälja potentsiaal. 
+
+Töös on analüüsitud lõputut potentsiaaliauku häirituse meetodil, kuuppolünoompotentsiaali häirituse meetodil ja kahest lineaarsest funktsioonist koosnevat potentsiaali kvaasi-klassikaliselt. Samuti on näidatud, et osade potentsiaalide korral ei mõjuta gravitatsioon soojusmahtuvust.
+
+Varem on uuritud gravitatsiooni mõju metallkera soojusmahtuvusele üldjuhul. Leiti üldine seos soojusmahtuvuse, temperatuuri, gravitatsioonivälja tugevuse ja lineaarse soojuspaisumisteguri vahel. Saadud tulemust on eksperimentaalselt väga raske kinnitada, kuna gravitatsiooni mõju on väga väike. Konkreetsete potentsiaalide läbivaatamine tõstaks ka varem leitud mudeli usaldusväärsust.
+
+Uurimistöö hüpotees on, et sõltuvalt potentsiaalist võib gravitatsioon nii tõsta kui ka langetada keha soojusmahtuvust.
+
+\chapter{Teoreetiline osa}
+
+\section{Tavapärane lahendus}
+
+Tavapärane lahendus põhineb soojuspaisumisega seotud erinevustel. Kerale $A$ soojust andes see paisub ja selle massikese tõuseb. Järelikult peab osa kerale A antavast soojushulgast kuluma kera massikeskme gravitatsioonilise potentsiaalse energia tõstmiseks ja lõpptemperatuur on madalam algsest. Vastupidiselt, kera $B$ massikese langeb soojuspaisumise tõttu ja energiat saadakse juurde, järelikult on kera $B$ lõpptemperatuur kõrgem. 
+
+Pannakse ka kirja tavapärasele lahendusele vastavad valemid. Olgu kerade soojusmahtuvus $C_0$ gravitatsioonivälja puudumisel. Tavapärase lahenduse korrale, kui kera A soojendatakse, siis selle massikese tõused $dR=\alpha R \, dT$ võrra, kus $dT$ on temperatuuri tõus, $\alpha$ on soojuspaisumistegur ja $R$ on kera raadius. Kera saab potentsiaalse energia $d\Phi = mg \, dR$, kus $m$ on keha mass ja $g$ on raskuskiirendus. Järelikult, kui soojushulk \(\delta Q\) antakse süsteemile, siis saadakse, et 
+\begin{equation}
+    \delta Q = C_0 \, dT + mg \, dR = C_0 \, dT + mg\alpha R \, dT = (C_0 +  mg\alpha R) dT.       
+\end{equation}
+See on ekvivalentne väitega, et kera \(A\) soojusmahtuvus on:
+\begin{equation}
+    C_A = C_0 + mg\alpha R.
+\end{equation}
+Analgoselt saame, et kera \(B\) soojusmahtuvus on 
+\begin{equation}
+    C_B = C_0 - mg\alpha R.
+\end{equation}
+Enamuse materjalide jaoks on \(\alpha > 0\), millest tulenevalt \(C_A>C_B\). Järelikult on tavapärase lahenduse kohaselt kera \(A\) lõpptemperatuur madalam kera \(B\) lõpptemperatuurist. 
+
+\section{Tavapärane lahendus ja selle termodünaamika II seaduse rikkumine}
+
+Tavapärases lahenduses kaudselt eeldatakse, et keha siseenergia \(U\) ja raadius \(R\) sõltuvad ainult temperatuurist \(T\), mitte aga raskuskiirendusest \(g\). Vaadeltakse järgnevat tsüklit: pall asub horisontaalsel külmal tasandil temperatuuriga \(T_1\); pall ühendatakse soojema reservaariga, mille temperatuur \(T_2=T_1+dT>T_1\); pall riputatakse nööri külge ja horisontaalne tasand eemaldatakse; pall ühendatakse külma revervuaariga, mille temperatuur on \(T_1\). Selle protsessi kasutegur on tehtud töö ja neeldunud soojuse suhe ning avaldub kujul \cite{palma15}
+\begin{equation}
+    \eta = \frac{2mg\alpha R}{C_0+mg\alpha R}.
+\end{equation}
+Kasutegur \(\eta\) ei sõltu \(dT\) suurusest. Termodünaamika teist seadus saab sõastada järgnevalt: iga tsükkel, mis töötab ainult temperatuuride \(T_1\) ja \(T_2\) juures ei saa olla effektiivsem Carnot' tsüklist, mis töötab samade temperatuuride juures. Carnot' tsükli efektiivsus on 
+\begin{equation}
+    \eta_{Carnot'} = \frac{dT}{T_2}
+\end{equation}
+Järelikult, kui \(dT\) on piisavalt väike, siis on palliga tsükli kasutegur suurem Carnot' tsükli kasutegurist. Teisisõnu rikub tavapärane lahendus termodünaamika II seadust.
+\begin{figure}[h]
+	\includegraphics[width=0.5\textwidth]{joonis1.pdf}
+	\caption{Probleemi ülesehitus}
+    \cite{palma15}
+	\allikas{}
+	\label{iphojoonis}% Selle järgi viidatakse, see rida peab olema pärast \caption
+\end{figure}
+
+\section{Statistiline mehaanika}
+
+Kasutades statistilise mehaanika meetodeid on võimalik leida kera soojusmahtuvuse sõltuvus gravitatsioonist:
+\begin{equation}
+    \frac{\partial C(g,T)}{\partial g} = -mTY \left( \alpha^2 + \frac{\partial \alpha}{\partial T} \right),
+\end{equation}
+kus \(C\) on soojusmahtuvus, \(g\) on raskuskiirenuds, \(m\) on kera mass, \(T\) on kera temperatuur, \(Y\) on massikeskme kõrgus, \(\alpha\) on lineaarne soojuspaisumistegur. 
+
+\section{Energiatasemed ja soojusmahtuvus}
+
+Soojusmahtuvus avaldub energiatasemetest järgneval kujul:
+\begin{equation}
+    \frac{\partial C}{\partial g}=- \frac{\partial}{\partial g}  \frac{\partial}{\partial T} \frac{\partial}{\partial \beta} \ln {\sum_{n} e^{-\beta E_n}}
+\end{equation}
+
+\section{Kvaasi-klassikaline lähendus}
+
+\section{Häirituse meetod}
+
+
+\chapter{Praktiline osa}
+
+
+\section{Üldlahendus}
+
+\section{Potentsiaalide analüüs}
+
+\subsection{Infinite potential well}
+
+\subsection{Lineaarsed potentsiaalid}
+
+\subsection{Kolmanda astme polünoompotentsiaal}
+
+\addchap{Kokkuvõte}
+
+
+% \nocite{*}
+\printbibliography
+\appendix
+\kinnitusleht
+\end{document}

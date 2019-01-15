@@ -9,6 +9,8 @@
 \juhendaja{prof Jaan Kalda \\ õp Toomas Reimann}
 \toggletrue{mitujuhendajat}% Uncomment kui on mitu juhendajat
 
+\DeclareMathOperator{\tr}{tr}
+
 \begin{document}
 \maketitle% Tiitelleht
 \tableofcontents% Sisukord
@@ -58,16 +60,16 @@ Kasutegur \(\eta\) ei sõltu \(dT\) suurusest. Termodünaamika teist seadus saab
 \end{equation}
 Järelikult, kui \(dT\) on piisavalt väike, siis on palliga tsükli kasutegur suurem Carnot' tsükli kasutegurist. Teisisõnu rikub tavapärane lahendus termodünaamika II seadust.
 \begin{figure}[h]
-	\includegraphics[width=0.5\textwidth]{joonis1.pdf}
-	\caption{Probleemi ülesehitus}
+    \includegraphics[width=0.5\textwidth]{joonis1.pdf}
+    \caption{Probleemi ülesehitus}
     \cite{palma15}
-	\allikas{}
-	\label{iphojoonis}% Selle järgi viidatakse, see rida peab olema pärast \caption
+    \allikas{}
+    \label{iphojoonis}% Selle järgi viidatakse, see rida peab olema pärast \caption
 \end{figure}
 
 \section{Statistiline mehaanika}
 
-Kasutades statistilise mehaanika meetodeid on võimalik leida kera soojusmahtuvuse sõltuvus gravitatsioonist:
+Kasutades statistilise mehaanika meetodeid on võimalik leida kera soojusmahtuvuse sõltuvus gravitatsioonist \cite{palma15}:
 \begin{equation}
     \frac{\partial C(g,T)}{\partial g} = -mTY \left( \alpha^2 + \frac{\partial \alpha}{\partial T} \right),
 \end{equation}
@@ -75,27 +77,60 @@ kus \(C\) on soojusmahtuvus, \(g\) on raskuskiirenuds, \(m\) on kera mass, \(T\)
 
 \section{Energiatasemed ja soojusmahtuvus}
 
-Soojusmahtuvus avaldub energiatasemetest järgneval kujul:
+Kanoonilise ansambli jaoks, mis on kvantmehaaniline ja diskreetne, on kanooniline statistiline summa \(Z\) defineeritud kui jälg Boltzmanni tegurist \cite{kardar07}:
 \begin{equation}
-    \frac{\partial C}{\partial g}=- \frac{\partial}{\partial g}  \frac{\partial}{\partial T} \frac{\partial}{\partial \beta} \ln {\sum_{n} e^{-\beta E_n}}
+    Z=\tr(e^{-\beta H})=\sum_{n} e^{-\beta E_n}.
+\end{equation}
+Keskmine energia \(U\) avaldub kui \cite{kardar07}
+\begin{equation}
+    U=- \frac{\partial \ln Z}{\partial \beta}.
+\end{equation}
+Soojusmahtuvus on defineeritud kui 
+\begin{equation}
+    C=\frac{\partial U}{\partial \beta}.
+\end{equation}
+Eelnevatest võrranditest on lihtne näha, et
+\begin{equation}
+    \frac{\partial C}{\partial g}=- \frac{\partial}{\partial g}  \frac{\partial}{\partial T} \frac{\partial}{\partial \beta} \ln {\sum_{n} e^{-\beta E_n}}.
 \end{equation}
 
 \section{Kvaasi-klassikaline lähendus}
 
-\section{Häirituse meetod}
+\section{Häiritusteooria}
+
+Schrödingeri võrrandit täpselt lahendada on võimalik ainult lihtsamatel juhtudel. Kui on teada lahend mingi juhu jaoks, siis väikeste häirituste korral on võimalik lahendada võrrandid ligikaudselt kasutades häiritusteooriat. 
+
+Oletame, et antud füüsikalise süsteemi Hamiltoonian avaldub kujul 
+\begin{equation}
+    H=H_0+V,
+\end{equation}
+kus \(V\) on väike häiritus häirimata operaatori \(H_0\), jaoks. Eeltatakse, et \(V\) ja \(H_0\) ei sõltu ajast. 
+
+Häirituse teooria diskreetse spektrumi jaoks saab formuleerida järgnevalt. Eeldatakse, et on teada diskreetse spektri omaväärtused (ingl  \textit{eigenvalues}) \(E_0^{(0)}\) ja omafunktsioonid (ingl \textit{eigenfunctions}) \(\phi^0\) häitimata operaatori \(H_0\) jaoks, st et on teada võrrandi
+\begin{equation}
+    H_0 \phi=E_0 \phi
+\end{equation}
+täpsed lahendid. Soovitakse leida ligikaudseid lahendeid võrrandile
+\begin{equation}
+    H \phi=(H_0+V)\phi=E\phi,
+\end{equation}
+st ligikaudesd avaldised häiritud operaatori \(H\) omafunktsioonide \(\phi_n\) ja omaväärtuste \(E_n\) väärtused.
 
 \chapter{Praktiline osa}
 
+Käesolevas osas leitakse konkreetsetele võimalikele kera potentsiaalidele vastavad soojusmahtuvuse sõltuvused gravitatsioonist, kus gravitatsiooni potentsiaal on võetud lineaarseks sõltuvalt ühest koordinaadist. Kuigi tegelik kera potentsiaal on keeruline võib anda konkreetne potentsiaal küllaltki täpse lahendi.
 
-\section{Üldlahendus}
+\section{Lineaarsed potentsiaalid}
+Vaatleme potentsiaali kujuga 
+\begin{equation}
+    V(x)=\begin{cases}
+        ax+mgx, & x<0,\\
+        bx+mgx, & x\ge0.
+    \end{cases}
+\end{equation}
 
-\section{Potentsiaalide analüüs}
 
-\subsection{Infinite potential well}
-
-\subsection{Lineaarsed potentsiaalid}
-
-\subsection{Kolmanda astme polünoompotentsiaal}
+\section{Kolmanda astme polünoompotentsiaal}
 
 \addchap{Kokkuvõte}
 

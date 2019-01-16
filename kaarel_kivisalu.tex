@@ -1,5 +1,6 @@
 \documentclass{trkut}% Reaalkooli vormistus. Muidu "report" või "article".
 \usepackage[style=trkut]{biblatex}% Kasutatud kirjanduse genereerimine
+\usepackage{amssymb}
 \addbibresource{viited_kaarel_kivisalu.bib}% Viidete info fail
 \defbibheading{bibliography}{\addchap{#1}}% Lisame kasutatud materjalid sisukorda
 
@@ -74,6 +75,13 @@ Kasutades statistilise mehaanika meetodeid on võimalik leida kera soojusmahtuvu
     \frac{\partial C(g,T)}{\partial g} = -mTY \left( \alpha^2 + \frac{\partial \alpha}{\partial T} \right),
 \end{equation}
 kus \(C\) on soojusmahtuvus, \(g\) on raskuskiirenuds, \(m\) on kera mass, \(T\) on kera temperatuur, \(Y\) on massikeskme kõrgus, \(\alpha\) on lineaarne soojuspaisumistegur. 
+\section{Schroedingeri vorrand}
+
+Scroendingerri vorrand uhes dimensioonis avaldub kujul
+\begin{equation}
+    
+\end{equation}
+
 
 \section{Energiatasemed ja soojusmahtuvus}
 
@@ -128,12 +136,31 @@ Vaatleme potentsiaali kujuga
         bx+mgx, & x\ge0.
     \end{cases}
 \end{equation}
-
+Kvaasi klassikalises lähenduses saame leida vastava omaväärtused:
+\begin{equation}
+    \int_{x_1}^{x_2} p(x)\, dx=\left( n-\frac{1}{2}\right)\pi \hbar,
+\end{equation}
+kus \(x_1=\frac{E_n}{a+mg}\) ja \(x_2=\frac{E_n}{b+mg}\). Saadakse, et 
+\begin{align}
+    \frac{2}{3}\sqrt{2m} E_n^{\frac{3}{2}} (\frac{1}{a+mg}+\frac{1}{b+mg}) &= \left(n-\frac{1}{2}\right) \pi \hbar\\
+    E_n &=\left[\frac{3}{2\sqrt{2}} \left(n-\frac{1}{2}\right) \frac{\pi \hbar}{\sqrt{m}} \frac{(a+mg)(b+mg)}{a+b+2mg}\right]^{\frac{2}{3}}
+\end{align}
 
 \section{Kolmanda astme polünoompotentsiaal}
+Vaatame potentsiaali kujuga 
+\begin{equation}
+    V(x)=\frac{m\omega^2 x^2}{2}+mgx+ax^3. 
+\end{equation}
+Lahendid saame leida häirituse meetodiga. On lihtne potentsiaali  
+\begin{equation}
+    V(x)=\frac{m\omega^2 x^2}{2}+mgx
+\end{equation}
+omaväärtused, kui teha asendus \(y=x+\frac{g}{\omega^2}\). Saadakse, et
+\begin{equation}
+    E_n=(n+\frac{1}{2}) \hbar \omega - \frac{1}{2}\frac{mg^2}{\omega^2}.
+\end{equation}
 
 \addchap{Kokkuvõte}
-
 
 % \nocite{*}
 \printbibliography

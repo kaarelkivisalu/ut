@@ -23,7 +23,7 @@ I rahvusvahelisel füüsikaolümpiaadil 1967. aastal oli järgnev probleem \cite
 
 Käesolevas töös uuritakse konkreetsete potentsiaalide korral konstantse gravitatsioonvälja mõju kera soojusmahtuvusele. Konstantse gravitatsioonivälja potentsiaal on lineaarne. Vaadatakse soojusmahtuvuse erinevust juhtudel, kui on ainult kera potentsiaal ja kera potentsiaalile on lisatud lineaarne gravitatsioonivälja potentsiaal. 
 
-Töös on analüüsitud lõputut potentsiaaliauku häirituse meetodil, kuuppolünoompotentsiaali häirituse meetodil ja kahest lineaarsest funktsioonist koosnevat potentsiaali kvaasi-klassikaliselt. Samuti on näidatud, et osade potentsiaalide korral ei mõjuta gravitatsioon soojusmahtuvust.
+Töös on analüüsitud kuuppolünoompotentsiaali häirituse meetodil ja kahest lineaarsest funktsioonist koosnevat potentsiaali kvaasi-klassikaliselt. Samuti on näidatud, et osade potentsiaalide korral ei mõjuta gravitatsioon soojusmahtuvust.
 
 Varem on uuritud gravitatsiooni mõju metallkera soojusmahtuvusele üldjuhul. Leiti üldine seos soojusmahtuvuse, temperatuuri, gravitatsioonivälja tugevuse ja lineaarse soojuspaisumisteguri vahel. Saadud tulemust on eksperimentaalselt väga raske kinnitada, kuna gravitatsiooni mõju on väga väike. Konkreetsete potentsiaalide läbivaatamine tõstaks ka varem leitud mudeli usaldusväärsust.
 
@@ -77,17 +77,20 @@ Kasutades statistilise mehaanika meetodeid on võimalik leida kera soojusmahtuvu
 kus \(C\) on soojusmahtuvus, \(g\) on raskuskiirenuds, \(m\) on kera mass, \(T\) on kera temperatuur, \(Y\) on massikeskme kõrgus, \(\alpha\) on lineaarne soojuspaisumistegur. 
 \section{Schroedingeri vorrand}
 
-Scroendingerri vorrand uhes dimensioonis avaldub kujul
+Ajast sõltumatu Scröendingeri võrrand ühes dimensioonis avaldub kujul \cite{griffiths05}
 \begin{equation}
-    
+    \hat{H} \Psi = E \Psi, 
 \end{equation}
-
+kus \(E\) on süsteemi koguenergia ja 
+\begin{equation}
+    \hat{H}=-\frac{\hbar^2}{2m}\frac{\d^2x}{dx^2}+V(x).
+\end{equation}
 
 \section{Energiatasemed ja soojusmahtuvus}
 
 Kanoonilise ansambli jaoks, mis on kvantmehaaniline ja diskreetne, on kanooniline statistiline summa \(Z\) defineeritud kui jälg Boltzmanni tegurist \cite{kardar07}:
 \begin{equation}
-    Z=\tr(e^{-\beta H})=\sum_{n} e^{-\beta E_n}.
+    Z=\tr(e^{-\beta \hat{H}})=\sum_{n} e^{-\beta E_n}.
 \end{equation}
 Keskmine energia \(U\) avaldub kui \cite{kardar07}
 \begin{equation}
@@ -110,7 +113,7 @@ Schrödingeri võrrandit täpselt lahendada on võimalik ainult lihtsamatel juht
 
 Oletame, et antud füüsikalise süsteemi Hamiltoonian avaldub kujul 
 \begin{equation}
-    H=H_0+V,
+    \hat{H}=H_0+V,
 \end{equation}
 kus \(V\) on väike häiritus häirimata operaatori \(H_0\), jaoks. Eeltatakse, et \(V\) ja \(H_0\) ei sõltu ajast. 
 
@@ -120,9 +123,9 @@ Häirituse teooria diskreetse spektrumi jaoks saab formuleerida järgnevalt. Eel
 \end{equation}
 täpsed lahendid. Soovitakse leida ligikaudseid lahendeid võrrandile
 \begin{equation}
-    H \phi=(H_0+V)\phi=E\phi,
+    \hat{H} \phi=(H_0+V)\phi=E\phi,
 \end{equation}
-st ligikaudesd avaldised häiritud operaatori \(H\) omafunktsioonide \(\phi_n\) ja omaväärtuste \(E_n\) väärtused.
+st ligikaudesd avaldised häiritud operaatori \(\hat{H}\) omafunktsioonide \(\phi_n\) ja omaväärtuste \(E_n\) väärtused.\cite{landau05}
 
 \chapter{Praktiline osa}
 

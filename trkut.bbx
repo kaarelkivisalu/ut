@@ -1,7 +1,7 @@
 % See fail on kasutatud materjalide jaoks
 \ProvidesFile{trkut.bbx}
 
-\ExecuteBibliographyOptions{language=estonian,dateabbrev=false,maxbibnames=99,giveninits=true}
+\ExecuteBibliographyOptions{language=estonian, sortlocale=en, dateabbrev=false,maxbibnames=99,giveninits=true, sorting=nyt}
 
 \newbibmacro*{begentry}{}
 \newbibmacro*{finentry}{\finentry}
@@ -85,7 +85,7 @@ references = {Kasutatud materjalid},
     \printfield{year}%
     )%
     \setunit{\addspace}%
-  }% 
+  }%
   %\setunit{\labelnamepunct}\newblock
   \ifnameundef{author}{%
   	\setunit{\adddot\addspace}%

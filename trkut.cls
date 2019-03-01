@@ -14,7 +14,6 @@
 \LoadClass[oneside, 12pt, headings=small, numbers=noendperiod]{scrreprt}% Numbrite vahel ja lõpus on punkt, chapter font large, 12pt.
 
 \RequirePackage{etoolbox}% Scriptimismacrod
-%\RequirePackage{libertine}%
 \RequirePackage{polyglossia}% Eesti keele tugi
 \setdefaultlanguage{estonian}
 \RequirePackage{csquotes}% Eesti jutumärgid käsuga \enquote{}
@@ -28,6 +27,7 @@
 \RequirePackage{graphicx}% Joonised
 \RequirePackage[colorlinks,citecolor=black,filecolor=black,linkcolor=black,urlcolor=black]{hyperref}% Sisukorras ja viidetel on lingid
 \RequirePackage{amsmath}
+\RequirePackage{amssymb}
 \RequirePackage{siunitx}
 
 %---------------------------------------------
@@ -143,30 +143,64 @@
   \ifx\\#2\\\else\edef\MT@char{\iffontchar#2\fi}\fi
 }
 
+% Appendix
+%\newcounter{@ppsavesec}
+%\newcounter{@ppsaveapp}
+%\setcounter{@ppsaveapp}{0}
+%\newcommand{\@ppsavesec}{%
+%\setcounter{@ppsavesec}{\value{chapter}}}
+%\newcommand{\@pprestoresec}{\setcounter{chapter}{\value{@ppsavesec}}}
+%\newcommand{\@ppsaveapp}{\setcounter{@ppsaveapp}{\value{chapter}}}
+%\newcommand{\restoreapp}{\setcounter{chapter}{\value{@ppsaveapp}}}
+%
+%\newcommand{\appendixname}{Lisa}
+%
+%\newcommand{\@resets@pp}{%
+%    \par
+%    \@ppsavesec
+%    \stepcounter{@pps}
+%    \setcounter{section}{0}%
+%    \setcounter{chapter}{0}%
+%    \renewcommand\@chapapp{\appendixname}%
+%    \renewcommand\thechapter{\@arabic\c@chapter}%
+%    \renewcommand{\theHchapter}{\theH@pps.\arabic{chapter}}%
+%    \def\Hy@chapapp{\appendixname}%
+%    \restoreapp
+%}
+%
+%\newenvironment{appendices}{%
+%    \@resets@pp
+%    \clear@ppage
+%    \addappheadtotoc
+%    \def\sectionname{\appendixname}
+%    \def\@seccntformat##1{\@ifundefined{##1name}{}{\csname ##1name\endcsname\ }%
+%    \csname the##1\endcsname\quad}
+%    \@ppsaveapp\@pprestoresec
+%}
 % Kas lisadel on ülemine ääris 2,5 cm või 5 cm?
 % Lisade pealkirjad stiilis "Lisa 2 Teise lisa pealkiri"
 % Vaata https://tex.stackexchange.com/questions/163890
-\let\oldaddchap\addchap
-\g@addto@macro\appendix{%
-	\renewcommand*{\thechapter}{%
-		{\arabic{chapter}}
-	}
-	\renewcommand*{\chapterformat}{%
-		{\chapapp\nobreakspace\thechapter\autodot\enskip}%
-	}
-	\renewcommand*{\chaptermarkformat}{%
-		{\chapapp\nobreakspace\thechapter\autodot\enskip}%
-	}
-	\let\oldaddcontentsline\addcontentsline
-	\newcommand\hackedaddcontentsline[3]{\oldaddcontentsline{#1}{#2}{\chapapp\nobreakspace#3}}
-	\let\oldchapter\chapter
-	\renewcommand*\chapter[1]{%
-		\let\addcontentsline\hackedaddcontentsline%
-		\oldchapter{#1}%
-		\let\addcontentsline\oldaddcontentsline%
-	}
-	\renewcommand*{\chapterheadstartvskip}{\vspace{0pt}}
-}
+%\let\oldaddchap\addchap
+%\g@addto@macro\appendix{%
+%	\renewcommand*{\thechapter}{%
+%		{\arabic{chapter}}
+%	}
+%	\renewcommand*{\chapterformat}{%
+%		{\chapapp\nobreakspace\thechapter\autodot\enskip}%
+%	}
+%	\renewcommand*{\chaptermarkformat}{%
+%		{\chapapp\nobreakspace\thechapter\autodot\enskip}%
+%	}
+%	\let\oldaddcontentsline\addcontentsline
+%	\newcommand\hackedaddcontentsline[3]{\oldaddcontentsline{#1}{#2}{\chapapp\nobreakspace#3}}
+%	\let\oldchapter\chapter
+%	\renewcommand*\chapter[1]{%
+%		\let\addcontentsline\hackedaddcontentsline%
+%		\oldchapter{#1}%
+%		\let\addcontentsline\oldaddcontentsline%
+%	}
+%	\renewcommand*{\chapterheadstartvskip}{\vspace{0pt}}
+%}
 
 % Font size
 % \tiny			6pt
@@ -185,7 +219,7 @@
 \setlength{\parskip}{1em}%              Lõiguvahe on 1 em
 \setlength{\topskip}{0pt}%              Ülaääre ja teksti vahel pole vaba ruumi
 
-% Pealkirjade vahed 
+% Pealkirjade vahed
 \RedeclareSectionCommand[%
 beforeskip=2.5 cm]{chapter}
 \renewcommand*{\chapterheadendvskip}{\vspace{0em}}
@@ -238,14 +272,14 @@ tocindent=10em]{subparagraph}
 \renewcommand{\maketitle}{%
 	\newpage
 	\thispagestyle{empty}
-	\large	
+	\large
 	\begin{center}
         \@asutus
 	\end{center}
 	\vspace{8cm}
 	\begin{center}
 		{\LARGE\textbf{\@title}}
-		
+
 		\@paber
 	\end{center}
 	\vspace{2cm}
@@ -275,40 +309,40 @@ tocindent=10em]{subparagraph}
 	\setlength{\vskip}{0 cm}
 	\Large{\textbf{Kinnitusleht}}
     \normalsize
-    
-    Kinnitan, et 
+
+    Kinnitan, et
     \begin{itemize}
         \item koostasin uurimistöö iseseisvalt. Kõigile töös kasutatud teiste autorite töödele ja
         andme\-allikatele on viidatud;
         \item olen teadlik, et uurimistööd ei edastata teistele tulu teenimise eesmärgil ega jagata
         tead\-likult plagieerimiseks.
     \end{itemize}
-    
+
     \vspace{1em}
     \dotfill
-    
-    kuupäev / nimi / allkiri 
-    
+
+    kuupäev / nimi / allkiri
+
     \vspace{1.5cm}
-    \noindent Tunnistan uurimistöö kaitsmisvalmiks. 
-    
+    \noindent Tunnistan uurimistöö kaitsmisvalmiks.
+
     \iftoggle{mitujuhendajat}{%
-		Juhendajad  
-		
+		Juhendajad
+
 		\vspace{1em}
-        \dotfill 
-    
+        \dotfill
+
         kuupäev / nimi / allkiri
 
-        \dotfill 
-    
+        \dotfill
+
         kuupäev / nimi / allkiri
 	}{%
 		Juhendaja
-		
+
 		\vspace{1em}
-        \dotfill 
-    
+        \dotfill
+
         kuupäev / nimi / allkiri
 	}
     \vfill

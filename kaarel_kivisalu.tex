@@ -1,6 +1,5 @@
 \documentclass{trkut}% Reaalkooli vormistus. Muidu "report" või "article".
 \usepackage[style=trkut]{biblatex}% Kasutatud kirjanduse genereerimine
-\usepackage{amssymb}
 \addbibresource{viited_kaarel_kivisalu.bib}% Viidete info fail
 \defbibheading{bibliography}{\addchap{#1}}% Lisame kasutatud materjalid sisukorda
 
@@ -11,6 +10,7 @@
 \toggletrue{mitujuhendajat}% Uncomment kui on mitu juhendajat
 
 \DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\erf}{erf}
 
 \begin{document}
 \maketitle% Tiitelleht
@@ -21,7 +21,7 @@ I rahvusvahelisel füüsikaolümpiaadil 1967. aastal oli järgnev probleem \cite
 
 \textit{Kaks homogeenset ühesugust kera on sama algtemperatuuriga. Üks kera on liikumatult horisontaalse tasandil, teine ripub niidi küljes. Mõlemale kerale antakse võrdne soojushulk. Kas kerade lõpptemperatuur on sama või mitte. Soojuskadudega mitte arvestada.}
 
-Käesolevas töös uuritakse konkreetsete potentsiaalide korral konstantse gravitatsioonvälja mõju kera soojusmahtuvusele. Konstantse gravitatsioonivälja potentsiaal on lineaarne. Vaadatakse soojusmahtuvuse erinevust juhtudel, kui on ainult kera potentsiaal ja kera potentsiaalile on lisatud lineaarne gravitatsioonivälja potentsiaal. 
+Käesolevas töös uuritakse konkreetsete potentsiaalide korral konstantse gravitatsioonvälja mõju kera soojusmahtuvusele. Konstantse gravitatsioonivälja potentsiaal on lineaarne. Vaadatakse soojusmahtuvuse erinevust juhtudel, kui on ainult kera potentsiaal ja kera potentsiaalile on lisatud lineaarne gravitatsioonivälja potentsiaal.
 
 Töös on analüüsitud kuuppolünoompotentsiaali häirituse meetodil ja kahest lineaarsest funktsioonist koosnevat potentsiaali kvaasi-klassikaliselt. Samuti on näidatud, et osade potentsiaalide korral ei mõjuta gravitatsioon soojusmahtuvust.
 
@@ -33,21 +33,21 @@ Uurimistöö hüpotees on, et sõltuvalt potentsiaalist võib gravitatsioon nii 
 
 \section{Tavapärane lahendus}
 
-Tavapärane lahendus põhineb soojuspaisumisega seotud erinevustel. Kerale $A$ soojust andes see paisub ja selle massikese tõuseb. Järelikult peab osa kerale A antavast soojushulgast kuluma kera massikeskme gravitatsioonilise potentsiaalse energia tõstmiseks ja lõpptemperatuur on madalam algsest. Vastupidiselt, kera $B$ massikese langeb soojuspaisumise tõttu ja energiat saadakse juurde, järelikult on kera $B$ lõpptemperatuur kõrgem. 
+Tavapärane lahendus põhineb soojuspaisumisega seotud erinevustel. Kerale $A$ soojust andes see paisub ja selle massikese tõuseb. Järelikult peab osa kerale A antavast soojushulgast kuluma kera massikeskme gravitatsioonilise potentsiaalse energia tõstmiseks ja lõpptemperatuur on madalam algsest. Vastupidiselt, kera $B$ massikese langeb soojuspaisumise tõttu ja energiat saadakse juurde, järelikult on kera $B$ lõpptemperatuur kõrgem.
 
-Pannakse ka kirja tavapärasele lahendusele vastavad valemid. Olgu kerade soojusmahtuvus $C_0$ gravitatsioonivälja puudumisel. Tavapärase lahenduse korrale, kui kera A soojendatakse, siis selle massikese tõused $dR=\alpha R \, dT$ võrra, kus $dT$ on temperatuuri tõus, $\alpha$ on soojuspaisumistegur ja $R$ on kera raadius. Kera saab potentsiaalse energia $d\Phi = mg \, dR$, kus $m$ on keha mass ja $g$ on raskuskiirendus. Järelikult, kui soojushulk \(\delta Q\) antakse süsteemile, siis saadakse, et 
+Pannakse ka kirja tavapärasele lahendusele vastavad valemid. Olgu kerade soojusmahtuvus $C_0$ gravitatsioonivälja puudumisel. Tavapärase lahenduse korrale, kui kera A soojendatakse, siis selle massikese tõused $dR=\alpha R \, dT$ võrra, kus $dT$ on temperatuuri tõus, $\alpha$ on soojuspaisumistegur ja $R$ on kera raadius. Kera saab potentsiaalse energia $d\Phi = mg \, dR$, kus $m$ on keha mass ja $g$ on raskuskiirendus. Järelikult, kui soojushulk \(\delta Q\) antakse süsteemile, siis saadakse, et
 \begin{equation}
-    \delta Q = C_0 \, dT + mg \, dR = C_0 \, dT + mg\alpha R \, dT = (C_0 +  mg\alpha R) dT.       
+    \delta Q = C_0 \, dT + mg \, dR = C_0 \, dT + mg\alpha R \, dT = (C_0 +  mg\alpha R) dT.
 \end{equation}
 See on ekvivalentne väitega, et kera \(A\) soojusmahtuvus on:
 \begin{equation}
     C_A = C_0 + mg\alpha R.
 \end{equation}
-Analgoselt saame, et kera \(B\) soojusmahtuvus on 
+Analgoselt saame, et kera \(B\) soojusmahtuvus on
 \begin{equation}
     C_B = C_0 - mg\alpha R.
 \end{equation}
-Enamuse materjalide jaoks on \(\alpha > 0\), millest tulenevalt \(C_A>C_B\). Järelikult on tavapärase lahenduse kohaselt kera \(A\) lõpptemperatuur madalam kera \(B\) lõpptemperatuurist. 
+Enamiku materjalide jaoks on \(\alpha > 0\), millest tulenevalt \(C_A>C_B\). Järelikult on tavapärase lahenduse kohaselt kera \(A\) lõpptemperatuur madalam kera \(B\) lõpptemperatuurist.
 
 \section{Tavapärane lahendus ja selle termodünaamika II seaduse rikkumine}
 
@@ -55,7 +55,7 @@ Tavapärases lahenduses kaudselt eeldatakse, et keha siseenergia \(U\) ja raadiu
 \begin{equation}
     \eta = \frac{2mg\alpha R}{C_0+mg\alpha R}.
 \end{equation}
-Kasutegur \(\eta\) ei sõltu \(dT\) suurusest. Termodünaamika teist seadus saab sõastada järgnevalt: iga tsükkel, mis töötab ainult temperatuuride \(T_1\) ja \(T_2\) juures ei saa olla effektiivsem Carnot' tsüklist, mis töötab samade temperatuuride juures. Carnot' tsükli efektiivsus on 
+Kasutegur \(\eta\) ei sõltu \(dT\) suurusest. Termodünaamika teist seadus saab sõastada järgnevalt: iga tsükkel, mis töötab ainult temperatuuride \(T_1\) ja \(T_2\) juures ei saa olla effektiivsem Carnot' tsüklist, mis töötab samade temperatuuride juures. Carnot' tsükli efektiivsus on
 \begin{equation}
     \eta_{Carnot'} = \frac{dT}{T_2}
 \end{equation}
@@ -74,14 +74,14 @@ Kasutades statistilise mehaanika meetodeid on võimalik leida kera soojusmahtuvu
 \begin{equation}
     \frac{\partial C(g,T)}{\partial g} = -mTY \left( \alpha^2 + \frac{\partial \alpha}{\partial T} \right),
 \end{equation}
-kus \(C\) on soojusmahtuvus, \(g\) on raskuskiirenuds, \(m\) on kera mass, \(T\) on kera temperatuur, \(Y\) on massikeskme kõrgus, \(\alpha\) on lineaarne soojuspaisumistegur. 
+kus \(C\) on soojusmahtuvus, \(g\) on raskuskiirenuds, \(m\) on kera mass, \(T\) on kera temperatuur, \(Y\) on massikeskme kõrgus, \(\alpha\) on lineaarne soojuspaisumistegur.
 \section{Schroedingeri vorrand}
 
 Ajast sõltumatu Scröendingeri võrrand ühes dimensioonis avaldub kujul \cite{griffiths05}
 \begin{equation}
-    \hat{H} \Psi = E \Psi, 
+    \hat{H} \Psi = E \Psi,
 \end{equation}
-kus \(E\) on süsteemi koguenergia ja 
+kus \(E\) on süsteemi koguenergia ja
 \begin{equation}
     \hat{H}=-\frac{\hbar^2}{2m}\frac{\d^2x}{dx^2}+V(x).
 \end{equation}
@@ -96,9 +96,9 @@ Keskmine energia \(U\) avaldub kui \cite{kardar07}
 \begin{equation}
     U=- \frac{\partial \ln Z}{\partial \beta}.
 \end{equation}
-Soojusmahtuvus on defineeritud kui 
+Soojusmahtuvus on defineeritud kui
 \begin{equation}
-    C=\frac{\partial U}{\partial \beta}.
+    C=\frac{\partial U}{\partial T}.
 \end{equation}
 Eelnevatest võrranditest on lihtne näha, et
 \begin{equation}
@@ -109,13 +109,13 @@ Eelnevatest võrranditest on lihtne näha, et
 
 \section{Häiritusteooria}
 
-Schrödingeri võrrandit täpselt lahendada on võimalik ainult lihtsamatel juhtudel. Kui on teada lahend mingi juhu jaoks, siis väikeste häirituste korral on võimalik lahendada võrrandid ligikaudselt kasutades häiritusteooriat. 
+Schrödingeri võrrandit täpselt lahendada on võimalik ainult lihtsamatel juhtudel. Kui on teada lahend mingi juhu jaoks, siis väikeste häirituste korral on võimalik lahendada võrrandid ligikaudselt kasutades häiritusteooriat.
 
-Oletame, et antud füüsikalise süsteemi Hamiltoonian avaldub kujul 
+Oletame, et antud füüsikalise süsteemi Hamiltoonian avaldub kujul
 \begin{equation}
     \hat{H}=H_0+V,
 \end{equation}
-kus \(V\) on väike häiritus häirimata operaatori \(H_0\), jaoks. Eeltatakse, et \(V\) ja \(H_0\) ei sõltu ajast. 
+kus \(V\) on väike häiritus häirimata operaatori \(H_0\), jaoks. Eeltatakse, et \(V\) ja \(H_0\) ei sõltu ajast.
 
 Häirituse teooria diskreetse spektrumi jaoks saab formuleerida järgnevalt. Eeldatakse, et on teada diskreetse spektri omaväärtused (ingl  \textit{eigenvalues}) \(E_0^{(0)}\) ja omafunktsioonid (ingl \textit{eigenfunctions}) \(\phi^0\) häitimata operaatori \(H_0\) jaoks, st et on teada võrrandi
 \begin{equation}
@@ -131,42 +131,66 @@ st ligikaudesd avaldised häiritud operaatori \(\hat{H}\) omafunktsioonide \(\ph
 
 Käesolevas osas leitakse konkreetsetele võimalikele kera potentsiaalidele vastavad soojusmahtuvuse sõltuvused gravitatsioonist, kus gravitatsiooni potentsiaal on võetud lineaarseks sõltuvalt ühest koordinaadist. Kuigi tegelik kera potentsiaal on keeruline võib anda konkreetne potentsiaal küllaltki täpse lahendi.
 
-\section{Lineaarsed potentsiaalid}
-Vaatleme potentsiaali kujuga 
+\section{Tükiti lineaarne potentsiaal}
+Vaadeltakse potentsiaali kujuga
 \begin{equation}
     V(x)=\begin{cases}
-        ax+mgx, & x<0,\\
-        bx+mgx, & x\ge0.
+        (-a+mg)x, & x<0,\\
+        (b+mg)x, & x\ge0,
     \end{cases}
 \end{equation}
-Kvaasi klassikalises lähenduses saame leida vastava omaväärtused:
+kus $a$ ja $b$ on positiivsed reaalarvulised konstandid ning $-a+mg<0$ ja $b+mg>0$.
+Kvaasi-klassikalises lähenduses saame leida vastava energiatasemed:
 \begin{equation}
-    \int_{x_1}^{x_2} p(x)\, dx=\left( n-\frac{1}{2}\right)\pi \hbar,
+    \left( n+\frac{1}{2}\right)\pi \hbar = \int_{x_1}^{0} \sqrt{2m[E_n-(-a+mg)x]}\, dx + \int_{0}^{x_2} \sqrt{2m[E_n-(b+mg)x]} \, dx,
 \end{equation}
-kus \(x_1=\frac{E_n}{a+mg}\) ja \(x_2=\frac{E_n}{b+mg}\). Saadakse, et 
+kus \(n \in \{0, 1, 2, ...\}\), \(x_1=\frac{E_n}{-a+mg}\) ja \(x_2=\frac{E_n}{b+mg}\). Integreerides saadakse, et
 \begin{align}
-    \frac{2}{3}\sqrt{2m} E_n^{\frac{3}{2}} (\frac{1}{a+mg}+\frac{1}{b+mg}) &= \left(n-\frac{1}{2}\right) \pi \hbar\\
-    E_n &=\left[\frac{3}{2\sqrt{2}} \left(n-\frac{1}{2}\right) \frac{\pi \hbar}{\sqrt{m}} \frac{(a+mg)(b+mg)}{a+b+2mg}\right]^{\frac{2}{3}}
+    \left(n+\frac{1}{2}\right)\pi \hbar &= \sqrt{2m}\left.\left[-\frac{2(E_n-(-a-mg)x)^\frac{2}{3}}{3(-a+mg)}\right]\right|^0_{x_1} + \sqrt{2m}\left.\left[-\frac{2(E_n-(b-mg)x)^\frac{2}{3}}{3(b+mg)}\right]\right|^{0}_{x_2} \notag \\
+    &= -\frac{2\sqrt{2m}E_n^{\frac{3}{2}}}{3(-a+mg)}+\frac{2\sqrt{2m}E_n^{\frac{3}{2}}}{3(b+mg)}.
 \end{align}
+$E_n$ avaldades saadakse, et
+\begin{equation}
+    E_n =\left[\frac{3\pi}{2\sqrt{2}} \frac{\hbar}{\sqrt{m}} \frac{(-a+mg)(b+mg)}{a+b}\right]^{\frac{2}{3}} \left(n+\frac{1}{2}\right)^{\frac{2}{3}} . \label{tukene}
+\end{equation}
+Asendades võrrandisse \ref{tukene} $c=\left[\frac{3\pi}{2\sqrt{2}} \frac{\hbar}{\sqrt{m}} \frac{(-a+mg)(b+mg)}{a+b}\right]^{\frac{2}{3}}$ avaldub statistiline summa järgnevalt:
+\begin{equation}
+    Z=\sum_{n=0}^{\infty} e^{-\beta c \left(n+\frac{1}{2}\right)^\frac{2}{3}}.
+\end{equation}
+Kui $\beta c\ll 1$, siis saab summa asendada integraaliga ja $n+\frac{1}{2}\approx n$:
+\begin{equation}
+    Z=\sum_{n=0}^{\infty} e^{-\beta c \left(n+\frac{1}{2}\right)^\frac{2}{3}} \approx \int_0^\infty e^{-\beta c n^\frac{2}{3}} \, dn = \left.\left[ \frac{3\sqrt{\pi}  \erf{\left( {n}^\frac{1}{3} \sqrt{\beta c}\right)} }{4 (\beta c)^\frac{3}{2}}-\frac{3n^\frac{1}{3} e^{-\beta cn^\frac{2}{3}}}{2 \beta c }\right]\right|^{\infty}_{0}=\frac{3\sqrt{\pi}}{4(\beta c)^\frac{3}{2}} .
+\end{equation}
+
+\section{Tükiti paraboolne potentsiaal}
+
+\clearpage
+
+\begin{equation}
+    \frac{\sqrt{m} \left( \sqrt{2} {g}^{2} m^2 + {{2}^{\frac{5}{2}}}\, {E_n} a\right)  \arcsin\left( \frac{\sqrt{{{g}^{2}}\, {{m}^{2}}+4 {E_n} a} \sqrt{{{g}^{2}}\, {{m}^{4}}+4 {E_n} a\, {{m}^{2}}}}{{{g}^{2}}\, {{m}^{3}}+4 {E_n} a m}\right) }{4 {{a}^{\frac{3}{2}}}}=\ensuremath{\pi}  \left( n+\frac{1}{2}\right)  \hbar
+\end{equation}
+
+
+\clearpage
 
 \section{Kolmanda astme polünoompotentsiaal}
-Vaatame potentsiaali kujuga 
+Vaatame potentsiaali kujuga
 \begin{equation}
-    V(x)=\frac{m\omega^2 x^2}{2}+mgx+ax^3. 
+    V(x)=\frac{m\omega^2 x^2}{2}+mgx+ax^3.
 \end{equation}
-Lahendid saame leida häirituse meetodiga. On lihtne potentsiaali  
+Lahendid saame leida häirituse meetodiga. On lihtne potentsiaali
 \begin{equation}
     V(x)=\frac{m\omega^2 x^2}{2}+mgx
 \end{equation}
 omaväärtused, kui teha asendus \(y=x+\frac{g}{\omega^2}\). Saadakse, et
 \begin{equation}
-    E_n=(n+\frac{1}{2}) \hbar \omega - \frac{1}{2}\frac{mg^2}{\omega^2}.
+    E_n=\left(n+\frac{1}{2}\right) \hbar \omega - \frac{1}{2}\frac{mg^2}{\omega^2}.
 \end{equation}
 
 \addchap{Kokkuvõte}
 
 % \nocite{*}
 \printbibliography
-\appendix
 \kinnitusleht
+
 \end{document}

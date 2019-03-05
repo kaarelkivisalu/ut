@@ -17,7 +17,8 @@
 \renewcommand\ket[1]{{|{#1}\rangle}}
 \renewcommand\Bra[1]{\mleft\langle#1\mright|}
 \renewcommand\Ket[1]{\mleft|#1\mright\rangle}
-
+\renewcommand\braket[1]{\langle{#1}\rangle}
+\reversemarginpar
 
 \begin{document}
 \maketitle% Tiitelleht
@@ -28,14 +29,18 @@ I rahvusvahelisel füüsikaolümpiaadil 1967. aastal oli järgnev probleem \cite
 
 \textit{Kaks homogeenset ühesugust kera on sama algtemperatuuriga. Üks kera on liikumatult horisontaalse tasandil, teine ripub niidi küljes. Mõlemale kerale antakse võrdne soojushulk. Kas kerade lõpptemperatuur on sama või mitte. Soojuskadudega mitte arvestada.}
 
-Käesolevas töös uuritakse konkreetsete potentsiaalide korral konstantse gravitatsioonvälja mõju kera soojusmahtuvusele. Konstantse gravitatsioonivälja potentsiaal on lineaarne. Vaadatakse soojusmahtuvuse erinevust juhtudel, kui on ainult kera potentsiaal ja kera potentsiaalile on lisatud lineaarne gravitatsioonivälja potentsiaal.
+Käesolevas töös uuritakse konkreetsete potentsiaalide korral konstantse gravitatsioonvälja mõju kera soojusmahtuvusele.
+Konstantse gravitatsioonivälja potentsiaal on lineaarne.
+Vaadatakse soojusmahtuvuse erinevust juhtudel, kui on ainult kera potentsiaal ja kera potentsiaalile on lisatud lineaarne gravitatsioonivälja potentsiaal.
 
 Töös on analüüsitud kuuppolünoompotentsiaali häirituse meetodil ja kahest lineaarsest funktsioonist koosnevat potentsiaali kvaasi-klassikaliselt. Samuti on näidatud, et osade potentsiaalide korral ei mõjuta gravitatsioon soojusmahtuvust.
 
-Varem on uuritud gravitatsiooni mõju metallkera soojusmahtuvusele üldjuhul. Leiti üldine seos soojusmahtuvuse, temperatuuri, gravitatsioonivälja tugevuse ja lineaarse soojuspaisumisteguri vahel. Saadud tulemust on eksperimentaalselt väga raske kinnitada, kuna gravitatsiooni mõju on väga väike. Konkreetsete potentsiaalide läbivaatamine tõstaks ka varem leitud mudeli usaldusväärsust.
+Varem on uuritud gravitatsiooni mõju metallkera soojusmahtuvusele üldjuhul.
+Leiti üldine seos soojusmahtuvuse, temperatuuri, gravitatsioonivälja tugevuse ja lineaarse soojuspaisumisteguri vahel.
+Saadud tulemust on eksperimentaalselt väga raske kinnitada, kuna gravitatsiooni mõju on väga väike. Konkreetsete potentsiaalide läbivaatamine tõstaks ka varem leitud mudeli usaldusväärsust.
 
 Uurimistöö hüpotees on, et sõltuvalt potentsiaalist võib gravitatsioon nii tõsta kui ka langetada keha soojusmahtuvust.
-
+\addchap{Tähiste loetelu}
 \chapter{Teoreetiline osa}
 
 \section{Tavapärane lahendus}
@@ -94,22 +99,42 @@ kus \(C\) on soojusmahtuvus, \(g\) on raskuskiirenuds, \(m\) on kera mass, \(T\)
 %\end{equation}
 
 \section{Energiatasemed ja soojusmahtuvus}
-
-Kanoonilise ansambli jaoks, mis on kvantmehaaniline ja diskreetne, on kanooniline statistiline summa \(Z\) defineeritud kui jälg Boltzmanni tegurist \cite{kardar07}:
+Kvantmehaanilises statistlilises mehaanikas on mugav kasutada tihedasmaatriksit (ingl \textit{density matrix}) $\op{\rho}$ kvantmehaanilise operaatori ooteväärtuse (ingl \textit{expectation value}) leidmiseks.
+Tihedusmaatriks on defineeritud järgnevalt \parencite[172]{kardar07}:
 \begin{equation}
-    Z=\tr(e^{-\beta \op{H}})=\sum_{n} e^{-\beta E_n}.
+    \op{\rho}(t) \equiv \sum_j p_j \ket{\Psi_j(t)} \bra{\Psi_j(t)},
 \end{equation}
-Keskmine energia \(U\) avaldub kui \cite{kardar07}
+kus $\sum_j p_j=1$, $p_j > 0$ ja $\ket{\Psi_j}$ on puhas kvantolek (ingl \textit{pure quantum state}).
+See kujutab segakvantolekut (ingl \textit{mixed quantum state}), kus tõenäosusega $p_j$ on süsteem puhtas kvantolekus $\ket{\Psi_j}$.
+Selles formalismis avaldub kvantmehaanilise operaatori ooteväärtuse ansambli keskväärtus järgnevalt \parencite[172]{kardar07}:
 \begin{equation}
-    U=- \frac{\partial \ln Z}{\partial \beta}.
+    \overline{\braket{\op{O}}}=\tr(\op{\rho}\op{O}),
+    \label{ootev}
 \end{equation}
-Soojusmahtuvus on defineeritud kui
+kus jälg (ingl \textit{trace}) $\tr(\op{A}) \equiv \sum_n \braket{n|\op{A}|n}$\footnote{\url{http://en.citizendium.org/wiki/Trace_\%28mathematics\%29} lõputu dimensioon converges} \parencite{viide}. %$n\times n$ ruutmaatriksist on defineeritud kui $\tr(A) \equiv \sum_{i=1}^n a_{ii}$, kus $a_{ii}$ on maariksi $A$ $i$-nda rea ja $i$-nda veeru element.
+Kanoonilise ansambli\footnote{Ansambel, kus süsteem on soojuslikus tasakaalus fikseeritud temperatuuriga reservuaariga.} jaoks, mis on kvantmehaaniline ja diskreetne, avaldub kanooniline tihedusmaatriks järgnevalt \parencite[174]{kardar07}:
 \begin{equation}
-    C=\frac{\partial U}{\partial T}.
+    \op{\rho}(\beta) = \frac{e^{-\beta \op{H}}}{Z(\beta)},
+    \label{tihm}
 \end{equation}
-Eelnevatest võrranditest on lihtne näha, et
+kus $\beta \equiv 1/k_B T$, kus $T$ on temperatuur ja $k_B$ on Boltzmanni konstant,
+Kuna $\bra{\Psi_j}$ on normaliseeritud, siis
 \begin{equation}
-    \frac{\partial C}{\partial g}=- \frac{\partial}{\partial g}  \frac{\partial}{\partial T} \frac{\partial}{\partial \beta} \ln {\sum_{n} e^{-\beta E_n}}.
+    \braket{1}=\tr(\op{\rho})=\sum_n \braket{n|\op{\rho}|n}=\sum_{n, j} p_j |\braket{n| \Psi_j}|^2=\sum_j p_j=1.
+    \label{tihnorm}
+\end{equation}
+Võrranditest \eqref{tihm} ja \eqref{tihnorm} ning omadusest $\tr(c\op{A})=c\tr(\op{A})$ saadakse kvantmehaaniline statistiline summa $Z$, mis avaldub kujul
+\begin{equation}
+    Z=\tr(e^{-\beta \op{H}})=\sum_n e^{-\beta \op{H}}.
+    \label{part}
+\end{equation}
+Kasutades võrrandeid \eqref{ootev}, \eqref{tihm} ja \eqref{part} saadakse hamiltoniaani $\op{H}$ keskmine ooteväärtus
+\begin{equation}
+    \overline{\braket{\op{H}}}=\tr(\op{\rho}\op{H})=\frac{\tr{\op{H}e^{-\beta \op{H}}}}{Z}= -\frac{\partial \ln Z}{\partial \beta}.
+\end{equation}
+Hamiltoniaani keskmist ooteväärtust võib mõista kui süsteemi energait. Kuna ollakse huvitatud temperatuuri muutusel kui süsteemile antakse mingi enerigiahulk, siis on kasulik defineerida soojusmahtuvus kui
+\begin{equation}
+    C \equiv \frac{\partial \overline{\braket{\op{H}}}}{\partial T}.
 \end{equation}
 
 \section{Kvaasi-klassikaline lähendus}
@@ -127,14 +152,15 @@ kus
     p(x) \equiv \sqrt{2m[E-V(x)]}
 \end{equation}
 on klassikaline valem osakese impulsi jaoks koguenergiaga $E$ ja potentsiaalse energiaga $V(x)$.
-Piirkonnas, kus $E>V(x)$, on $p(x)$ reaalne. Seda piirkonda kutsutakse \enquote{klassikaliseks}, kuna klasskikaliselt on osake piiratud selles piirkonnas.
+Piirkonnas, kus $E>V(x)$, on $p(x)$ reaalne.
+Seda piirkonda kutsutakse \enquote{klassikaliseks}, kuna klasskikaliselt on osake piiratud selles piirkonnas.
 Üldiselt on $\psi$ kompleksfunktsioon, mida saab avaldada klassikalises piirkonnas amplituudi $A(x)$ ja faasi $\phi(x)$ kaudu, mis mõlemad on reaalsed \parencite[316]{griffiths05}:
 \begin{equation}
     \psi(x)=A(x)e^{i\phi(x)}.
 \end{equation}
-Eeldades, et amplituud $A$ muutub aeglaselt\footnote{Täpsemalt eeldatakse, et $A''/A\ll(\phi ')^2$ ja $A''/A\ll p^2/\hbar^2$.}, avaldub lainefunktsioon klassikalises piirkonnas kujul \parencite[316-318]{griffiths05}
+\marginpar{Kas oleks vaja tuletuskäiku?}Eeldades, et amplituud $A$ muutub aeglaselt\footnote{Täpsemalt eeldatakse, et $A''/A\ll(\phi ')^2$ ja $A''/A\ll p^2/\hbar^2$.}, avaldub lainefunktsioon klassikalises piirkonnas kujul \parencite[316-318]{griffiths05}
 \begin{equation}
-    \psi = \frac{C_1}{\sqrt{p(x)}}e^{\frac{i}{\hbar}\int p(x)\, dx} +\frac{C_2}{\sqrt{p(x)}}e^{-\frac{i}{\hbar}\int p(x)\, dx},
+    \psi = \frac{C_1}{\sqrt{p(x)}}\exp\left(\frac{i}{\hbar}\int p(x)\, dx\right) +\frac{C_2}{\sqrt{p(x)}}\exp\left(-\frac{i}{\hbar}\int p(x)\, dx\right),
     \label{eq:kvaasik1}
 \end{equation}
 kus $C_1$ ja $C_2$ on kompleksarvulised konstandid.
@@ -145,7 +171,7 @@ Valemi \eqref{eq:kvaasik1} saab ka kirja panna kujul \parencite[446]{shankar94}
 \end{equation}
 kus $A$ ja $B$ on reaalsed parameetrid.
 Kahjuks ei kehti \eqref{eq:kvaasik2} kui $E \approx V(x)$, kuna $\sqrt{p(x)} \to 0$. Olgu $V(x_1)=V(x_2)=E$, $x_1<x_2$ ja lõigul $(x_1, x_2)$ on $V(x)<E$.
-On siiski võimalik vaadeldes lainefunktsiooni $x_1$ lähedal näidata, et lõigul $(x_1, x_2)$ on lainefunktsioon järgmine \parencite[167-170]{landau05}:
+\marginpar{Kas oleks vaja tuletuskäiku?}On siiski võimalik vaadeldes lainefunktsiooni $x_1$ lähedal näidata, et lõigul $(x_1, x_2)$ on lainefunktsioon järgmine \parencite[167-170]{landau05}:
 \begin{equation}
     \psi(x)=\frac{A}{\sqrt{p(x)}} \cos \left[ \frac{1}{\hbar}\int_{x_1}^{x} p(x)\, dx - \frac{\pi}{4} \right],
 \end{equation}
@@ -168,28 +194,38 @@ või
 
 Schrödingeri võrrandit täpselt lahendada on võimalik ainult lihtsamatel juhtudel, keerulisemate juhtude jaoks on vaja teha lähendusi.
 Ajast sõltumatu häiritusteooria (edaspidi häiritusteooria) on lähendusmeetod, mida saab rakendada järgnevas olukorras: teades lahendit hamiltoniaani $\op[0]{H}$ omaväärtusülesandele (ingl \textit{eigenvalue problem}), tahetakse leida lahendit $\op{H}=\op[0]{H}+\op[1]{H}$, kus $\op[1]{H}$ on suhteliselt väike võrreldes $\op[0]{H}$-ga.
-Eeldatakse, et iga $\op[0]{H}$ kidumata omaketi (ingl \textit{eigenket}) $\Ket{n^0}$ omaväärtusega $E_n^0$ jaoks leidub $\op{H}$ kidumata omaket $\Ket{n}$ omaväärtusega $E_n$. Siis eeldades, et $H$ omaketid ja omaväärtused võib kirja panna häiritusseerias \parencite[451]{shankar94}:
+Eeldatakse, et iga $\op[0]{H}$ kidumata omaketi (ingl \textit{eigenket}) $\Ket{n^0}$ omaväärtusega $E_n^0$ jaoks leidub $\op{H}$ kidumata omaket $\Ket{n}$ omaväärtusega $E_n$.
+Siis eeldades, et $H$ omaketid ja omaväärtused võib kirja panna häiritusseerias \parencite[451]{shankar94}:
 \begin{align}
     \Ket{n}&=\Ket{n^0}+\Ket{n^1}+\Ket{n^2}+... \\
     E_n&=E_n^0+E_n^1+E_n^2+...
 \end{align}
 Iga liikme ülaindeks $k$ näitab millise $\op[1]{H}$ astmega eeldatakse, et iga liige on võrdeline.
-Selleks, et leida liikmeid $\Ket{n}$ ja $E_n$ arenduses, alustatakse omaväärtusvõrrandiga \parencite[451]{shankar94}:
+Selleks, et leida liikmeid $\Ket{n}$ ja $E_n$ arenduses, alustatakse omaväärtusvõrrandiga \parencite[451-452]{shankar94}:
 \begin{equation}
-    \op{H}\Ket{n}=E_n\Ket{n}
+    \op{H}\ket{n}=E_n\ket{n}
 \end{equation}
 või
 \begin{equation}
-    \big(\op[0]{H} + \op[1]{H}\big)\left(\Ket{n^0}+\Ket{n^1}+...\right)=\left(E_n^0+E_n^1+...\right) \left(\Ket{n^0}+\Ket{n^1}+...\right).
+    (\op[0]{H} + \op[1]{H})(\ket{n^0}+\ket{n^1}+...)=(E_n^0+E_n^1+...) (\ket{n^0}+\ket{n^1}+...).
     \label{terms}
 \end{equation}
 Vaadates võrrandis \eqref{terms} nullindat järku liikmeid saadakse võrrand
 \begin{equation}
-    \op[0]{H}\Ket{n^0}=E_n^0\Ket{n^0}.
+    \op[0]{H}\ket{n^0}=E_n^0\ket{n^0}.
 \end{equation}
 Eelduse järgi on see võrrand lahendatud ja omaket $\Ket{n^0}$ ja omaväärtused $E_n^0$ on teada. Vaadates võrrandis \eqref{terms} esimest järku liikmeid saadakse võrrand
 \begin{equation}
-    \op[0]{H}\Ket{n^1} + \op[1]{H}\Ket{n^0} = E_n^0\Ket{n^1} + E_n^1\Ket{n^0}
+    \op[0]{H}\ket{n^1} + \op[1]{H}\ket{n^0} = E_n^0\ket{n^1} + E_n^1\ket{n^0}.
+    \label{terms1}
+\end{equation}
+Korrutades võrrandi \eqref{terms1} mõlemad pooled $\bra{n^0}$-ga ning kasutades omadusi $\bra{n^0}\op[0]{H}=\bra{n^0}E_n^0$ ja $\braket{n^0|n^0}=1$ saadakse, et
+\begin{equation}
+    E_n^1=\braket{n^0|\op[1]{H}|n^0}.
+\end{equation}
+\marginpar{Kas oleks vaja tuletuskäiku?}Sarnaselt on võimalik saada teist järku parand energiale, mis avaldub kujul \parencite[451-453]{shankar94}:
+\begin{equation}
+    E_n^2=\sum_{m \neq n} \frac{|\braket{n^0|\op[1]{H}|m^0}|^2}{E_n^0-E_m^0}
 \end{equation}
 
 %Häirituse teooria diskreetse spektrumi jaoks saab formuleerida järgnevalt. Eeldatakse, et on teada diskreetse spektri omaväärtused (ingl  \textit{eigenvalues}) \(E_0^{(0)}\) ja omafunktsioonid (ingl \textit{eigenfunctions}) \(\phi^0\) häitimata operaatori \(H_0\) jaoks, st et on teada võrrandi
@@ -204,7 +240,8 @@ Eelduse järgi on see võrrand lahendatud ja omaket $\Ket{n^0}$ ja omaväärtuse
 
 \chapter{Praktiline osa}
 
-Käesolevas osas leitakse konkreetsetele võimalikele kera potentsiaalidele vastavad soojusmahtuvuse sõltuvused gravitatsioonist, kus gravitatsiooni potentsiaal on võetud lineaarseks sõltuvalt ühest koordinaadist. Kuigi tegelik kera potentsiaal on keeruline võib anda konkreetne potentsiaal küllaltki täpse lahendi.
+Käesolevas osas leitakse konkreetsetele võimalikele kera potentsiaalidele vastavad soojusmahtuvuse sõltuvused gravitatsioonist, kus gravitatsiooni potentsiaal on võetud lineaarseks sõltuvalt ühest koordinaadist.
+Kuigi tegelik kera potentsiaal on keeruline võib anda konkreetne potentsiaal küllaltki täpse lahendi.
 
 \section{Tükiti lineaarne potentsiaal}
 Vaadeltakse potentsiaali kujuga

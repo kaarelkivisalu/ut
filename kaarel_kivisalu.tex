@@ -111,7 +111,7 @@ Selles formalismis avaldub kvantmehaanilise operaatori ooteväärtuse ansambli k
     \overline{\braket{\op{O}}}=\tr(\op{\rho}\op{O}),
     \label{ootev}
 \end{equation}
-kus jälg (ingl \textit{trace}) $\tr(\op{A}) \equiv \sum_n \braket{n|\op{A}|n}$\footnote{\url{http://en.citizendium.org/wiki/Trace_\%28mathematics\%29} lõputu dimensioon converges} \parencite{viide}. %$n\times n$ ruutmaatriksist on defineeritud kui $\tr(A) \equiv \sum_{i=1}^n a_{ii}$, kus $a_{ii}$ on maariksi $A$ $i$-nda rea ja $i$-nda veeru element.
+kus jälg (ingl \textit{trace}) $\tr(\op{A}) \equiv \sum_n \braket{n|\op{A}|n}$\footnote{\url{http://en.citizendium.org/wiki/Trace_\%28mathematics\%29} lõputu dimensioon converges} \parencite{viide}.
 Kanoonilise ansambli\footnote{Ansambel, kus süsteem on soojuslikus tasakaalus fikseeritud temperatuuriga reservuaariga.} jaoks, mis on kvantmehaaniline ja diskreetne, avaldub kanooniline tihedusmaatriks järgnevalt \parencite[174]{kardar07}:
 \begin{equation}
     \op{\rho}(\beta) = \frac{e^{-\beta \op{H}}}{Z(\beta)},
@@ -131,11 +131,19 @@ Võrranditest \eqref{tihm} ja \eqref{tihnorm} ning omadusest $\tr(c\op{A})=c\tr(
 Kasutades võrrandeid \eqref{ootev}, \eqref{tihm} ja \eqref{part} saadakse hamiltoniaani $\op{H}$ keskmine ooteväärtus
 \begin{equation}
     \overline{\braket{\op{H}}}=\tr(\op{\rho}\op{H})=\frac{\tr{\op{H}e^{-\beta \op{H}}}}{Z}= -\frac{\partial \ln Z}{\partial \beta}.
+    \label{keskham}
 \end{equation}
 Hamiltoniaani keskmist ooteväärtust võib mõista kui süsteemi energait. Kuna ollakse huvitatud temperatuuri muutusel kui süsteemile antakse mingi enerigiahulk, siis on kasulik defineerida soojusmahtuvus kui
 \begin{equation}
-    C \equiv \frac{\partial \overline{\braket{\op{H}}}}{\partial T}.
+    C = \frac{\partial \overline{\braket{\op{H}}}}{\partial T}.
+    \label{soojuham}
 \end{equation}
+Kombineerides võrrandeid \eqref{keskham} ja \eqref{soojuham} saadakse, et
+\begin{equation}
+    C = k T^2 \frac{\partial^2 \ln Z}{\partial \beta^2}
+    \label{mahtuvus}
+\end{equation}
+
 
 \section{Kvaasi-klassikaline lähendus}
 
@@ -222,10 +230,12 @@ Eelduse järgi on see võrrand lahendatud ja omaket $\Ket{n^0}$ ja omaväärtuse
 Korrutades võrrandi \eqref{terms1} mõlemad pooled $\bra{n^0}$-ga ning kasutades omadusi $\bra{n^0}\op[0]{H}=\bra{n^0}E_n^0$ ja $\braket{n^0|n^0}=1$ saadakse, et
 \begin{equation}
     E_n^1=\braket{n^0|\op[1]{H}|n^0}.
+    \label{parand1}
 \end{equation}
 \marginpar{Kas oleks vaja tuletuskäiku?}Sarnaselt on võimalik saada teist järku parand energiale, mis avaldub kujul \parencite[451-453]{shankar94}:
 \begin{equation}
     E_n^2=\sum_{m \neq n} \frac{|\braket{n^0|\op[1]{H}|m^0}|^2}{E_n^0-E_m^0}
+    \label{parand2}
 \end{equation}
 
 %Häirituse teooria diskreetse spektrumi jaoks saab formuleerida järgnevalt. Eeldatakse, et on teada diskreetse spektri omaväärtused (ingl  \textit{eigenvalues}) \(E_0^{(0)}\) ja omafunktsioonid (ingl \textit{eigenfunctions}) \(\phi^0\) häitimata operaatori \(H_0\) jaoks, st et on teada võrrandi
@@ -267,12 +277,31 @@ $E_n$ avaldades saadakse, et
 \end{equation}
 Asendades võrrandisse \eqref{tukene} $c=\left[\frac{3\pi}{2\sqrt{2}} \frac{\hbar}{\sqrt{m}} \frac{(-a+mg)(b+mg)}{a+b}\right]^{\frac{2}{3}}$ avaldub statistiline summa järgnevalt:
 \begin{equation}
-    Z=\sum_{n=0}^{\infty} e^{-\beta c \left(n+\frac{1}{2}\right)^\frac{2}{3}}.
+    Z=\sum_{n=0}^{\infty} \exp \left( -\beta c \left(n+\frac{1}{2}\right)^\frac{2}{3} \right).
+    \label{linsum}
 \end{equation}
 Kui $\beta c\ll 1$, siis saab summa asendada integraaliga ja $n+\frac{1}{2}\approx n$:
 \begin{equation}
-    Z=\sum_{n=0}^{\infty} e^{-\beta c \left(n+\frac{1}{2}\right)^\frac{2}{3}} \approx \int_0^\infty e^{-\beta c n^\frac{2}{3}} \, dn = \left.\left[ \frac{3\sqrt{\pi}  \erf{\left( {n}^\frac{1}{3} \sqrt{\beta c}\right)} }{4 (\beta c)^\frac{3}{2}}-\frac{3n^\frac{1}{3} e^{-\beta cn^\frac{2}{3}}}{2 \beta c }\right]\right|^{\infty}_{0}=\frac{3\sqrt{\pi}}{4(\beta c)^\frac{3}{2}} .
+    Z \approx \int_0^\infty e^{-\beta c n^\frac{2}{3}} \, dn = \left.\left[ \frac{3\sqrt{\pi}  \erf{\left( {n}^\frac{1}{3} \sqrt{\beta c}\right)} }{4 (\beta c)^\frac{3}{2}}-\frac{3n^\frac{1}{3} e^{-\beta cn^\frac{2}{3}}}{2 \beta c }\right]\right|^{\infty}_{0} =\frac{3\sqrt{\pi}}{4(\beta c)^\frac{3}{2}} .
+    \label{linpart}
 \end{equation}
+Võrrandist \eqref{mahtuvus} ja \eqref{linpart} saadakse, et
+\begin{equation}
+    C=kT^2 \frac{\partial^2}{\partial \beta^2} \ln \frac{3\sqrt{\pi}}{4(\beta c)^\frac{3}{2}}=-k_BT^2\frac{\partial}{\partial \beta} \frac{3}{2\beta}=\frac{3k_B}{2}
+\end{equation}
+See tähendab, et kõrgetel temperatuuridel ei sõltu süsteemi soojusmahtuvus temperatuurist.
+Üldisemalt avaldub soojusmahtuvus võrranditest \eqref{mahtuvus} ja \eqref{linsum} järgnevalt:
+\begin{align}
+    C={}&kT^2 \frac{\partial^2}{\partial \beta^2} \ln Z \nonumber \\
+    ={}&kT^2\frac{\partial}{\partial \beta}\frac{1}{Z} \frac{\partial Z}{\partial \beta} \nonumber \\
+    ={}&kT^2\frac{\partial}{\partial \beta}\frac{1}{Z} \sum_{n=0}^{\infty} \frac{\partial}{\partial \beta} \exp \left( -\beta c \left(n+\frac{1}{2}\right)^\frac{2}{3} \right) \nonumber \\
+    ={}&kT^2\frac{\partial}{\partial \beta} \frac{\sum_{n=0}^{\infty} -c\left(n+\frac{1}{2}\right)^\frac{2}{3} \exp \left( -\beta c \left(n+\frac{1}{2}\right)^\frac{2}{3} \right)}{\sum_{n=0}^{\infty} \exp \left( -\beta c \left(n+\frac{1}{2}\right)^\frac{2}{3} \right)} \nonumber \\
+    \begin{split}\label{mahsum}
+        ={}&kT^2 \frac{c^2 \sum_{n=0}^\infty \left( n+\frac{1}{2}\right)^\frac{4}{3} \exp \left( -c \left( n+\frac{1}{2} \right)^\frac{2}{3} \beta \right) }{\sum_{n=0}^\infty {{\exp}\left( -c {{\left( n+\frac{1}{2}\right) }^{\frac{2}{3}}} \beta \right)}}  \\
+        & - \frac{c^2 \left( \sum_{n=0}^{\infty }{{{\left( n+\frac{1}{2}\right) }^{\frac{2}{3}}} {{ \exp}\left( -c {{\left( n+\frac{1}{2}\right) }^{\frac{2}{3}}} \beta \right)}}\right)^{2}}{{{\left( \sum_{n=0}^{\infty }{ {{\exp}\left( -c {{\left( n+\frac{1}{2}\right) }^{\frac{2}{3}}} \beta \right)}}\right) }^{2}}}
+    \end{split}
+\end{align}
+Kui $\beta c \gtrsim 1$, siis avaldise \eqref{mahsum} väärtus on võimalik küllaltki heas lähenduses leida vaadates ainult summade esimesi liikmeid.\footnote{$\beta c =1$ jaoks piisab küllaltki hea täpsuse jaoks mõnesajast liikmest.}
 
 \section{Tükiti paraboolne potentsiaal}
 
@@ -281,11 +310,16 @@ Kui $\beta c\ll 1$, siis saab summa asendada integraaliga ja $n+\frac{1}{2}\appr
 \end{equation}
 
 \section{Häiritusega harmooniline ostsillaator}
-Siin osas vaadeltakse harmoonilist ostsillaatorit, millele on lisatud kuuphäiritus, gravitatsiooniväljas. Selleks, et leida häirituse mõju süsteemile lahendatakse kõigepealt omaväärtusprobleem harmoonilise ostsillatori jaoks gravitatsiooniväljas. Sellele vastav hamiltoonian on
+
+Siin osas vaadeltakse harmoonilist ostsillaatorit, millele on lisatud kuuphäiritus, gravitatsiooniväljas.
+
+\subsection{Harmooniline ostsillaator gravitatsiooniväljas}
+
+Selleks, et leida häirituse mõju süsteemile lahendatakse kõigepealt omaväärtusprobleem harmoonilise ostsillatori jaoks gravitatsiooniväljas. Sellele vastav hamiltoonian on
 \begin{equation}
-    \op[0]{H}=\frac{\op{p}^2}{2m}+\frac{m\omega^2 \op{x}^2}{2} + mg\op{x}=\hbar \omega (A A^\dagger + 1/2)-k,
+    \op[0]{H}=\frac{\op{p}^2}{2m}+\frac{m\omega^2 \op{x}^2}{2} + mg\op{x}=\hbar \omega (A^\dagger A + 1/2)-k_1,
 \end{equation}
-kus $k=\frac{mg^2}{2\omega^2}$ ja
+kus $k_1=\frac{mg^2}{2\omega^2}$ ja
 \begin{align}
     \begin{split}
         A &= \sqrt{\frac{m\omega}{2\hbar}}\left[ \left( \op{x} + \frac{g}{\omega^2} \right) + \frac{i}{m\omega} \op{p} \right], \\
@@ -295,7 +329,7 @@ kus $k=\frac{mg^2}{2\omega^2}$ ja
 $A^\dagger$ on $A$ kaasoperaator.
 Defineeritakse operaator $\mathcal{H}$ järgnevalt:
 \begin{equation}
-    \mathcal{H} = \frac{\op[0]{H}}{\hbar \omega}=(A^\dagger A + 1/2)-\frac{k}{\hbar \omega}.
+    \mathcal{H} = \frac{\op[0]{H}}{\hbar \omega}=(A^\dagger A + 1/2)-\frac{k_1}{\hbar \omega}.
     \label{mathcalH}
 \end{equation}
 Tahetakse leida omaväärtused järgmisele võrrandile:
@@ -310,11 +344,9 @@ Kehtivad järgnevad kasulikud omadused:
 \end{align}
 Operaatorid $A$ ja $A^\dagger$ on kasulikud kuna need genereerivad uusi omaseisundeid. Kuna
 \begin{align}
-    \begin{split}
-        \mathcal{H}A\ket{\varepsilon}&=\left(A\mathcal{H}-[A, \mathcal{H}]\right)\ket{\varepsilon}\\
-        &=(A\mathcal{H}-A)\ket{\varepsilon}\\
+        \mathcal{H}A\ket{\varepsilon}&=\left(A\mathcal{H}-[A, \mathcal{H}]\right)\ket{\varepsilon} \nonumber\\
+        &=(A\mathcal{H}-A)\ket{\varepsilon} \nonumber\\
         &=(\varepsilon - 1)A\ket{\varepsilon},
-    \end{split}
 \end{align}
 siis peab oleama $A\ket{\varepsilon}$ omaseisundeid omaväärtusega $\varepsilon - 1$, st
 \begin{equation}
@@ -324,11 +356,9 @@ siis peab oleama $A\ket{\varepsilon}$ omaseisundeid omaväärtusega $\varepsilon
 kus $C_\varepsilon$ on konstant ja $\ket{\varepsilon -1}$ ja $\ket{\varepsilon}$ on normaliseeritud omaketid.
 Sarnaselt nähakse, et
 \begin{align}
-    \begin{split}
-        \mathcal{H}A^\dagger\ket{\varepsilon}&=\left(A^\dagger\mathcal{H}-[A^\dagger, \mathcal{H}]\right)\ket{\varepsilon}\\
-        &=(A^\dagger\mathcal{H}+A^\dagger)\ket{\varepsilon}\\
+        \mathcal{H}A^\dagger\ket{\varepsilon}&=\left(A^\dagger\mathcal{H}-[A^\dagger, \mathcal{H}]\right)\ket{\varepsilon} \nonumber \\
+        &=(A^\dagger\mathcal{H}+A^\dagger)\ket{\varepsilon} \nonumber \\
         &=(\varepsilon + 1)A^\dagger\ket{\varepsilon},
-    \end{split}
 \end{align}
 nii et
 \begin{equation}
@@ -347,25 +377,26 @@ Korrutades võrrandi \eqref{nullseis} läbi operaatoriga $A^\dagger$ saadakse, e
 \end{equation}
 Võrranditest \eqref{mathcalH} ja \eqref{aanull} saadakse, et
 \begin{equation}
-    \left(\mathcal{H}-1/2 + \frac{k}{\hbar \omega} \right)\ket{\varepsilon_0}=0
+    \left(\mathcal{H}-1/2 + \frac{k_1}{\hbar \omega} \right)\ket{\varepsilon_0}=0
 \end{equation}
 või
 \begin{equation}
-    \mathcal{H}\ket{\varepsilon_0}=\left(\frac{1}{2} - \frac{k}{\hbar \omega}\right) \ket{\varepsilon_0}
+    \mathcal{H}\ket{\varepsilon_0}=\left(\frac{1}{2} - \frac{k_1}{\hbar \omega}\right) \ket{\varepsilon_0}
 \end{equation}
 või
 \begin{equation}
-    \varepsilon_0=\frac{1}{2} - \frac{k}{\hbar \omega}.
+    \varepsilon_0=\frac{1}{2} - \frac{k_1}{\hbar \omega}.
 \end{equation}
 Kasutades operaatorit $A^\dagger$ korduvalt saab suurendada seisundit $\ket{\varepsilon_0}$ lõputult. Seega avalduvad ostsillatori energiatasemed järgnevalt:\footnote{Kuna ühes dimensioonis pole kidumist, siis on ainsad energiatasemed \parencite[176-177]{shankar94}.}
 \begin{equation}
-    \varepsilon_n=\left(n+\frac{1}{2}\right)-\frac{k}{\hbar \omega}, \qquad n=0, 1, 2,\dots
+    \varepsilon_n=\left(n+\frac{1}{2}\right)-\frac{k_1}{\hbar \omega}, \qquad n=0, 1, 2,\dots
 \end{equation}
 või
 \begin{equation}
-    E_n=\hbar \omega \left(n+\frac{1}{2}\right)-k, \qquad n=0, 1, 2,\dots
+    E_n=\hbar \omega \left(n+\frac{1}{2}\right)-k_1, \qquad n=0, 1, 2,\dots
+    \label{nullenergia}
 \end{equation}
-Nüüd tahetakse leida võrranditest \eqref{cepsilon} ja \eqref{cepsilon1} konstandid $C_\varepsilon$ ja $C_{\varepsilon+1}$. Kuna $\varepsilon=n+1/2 - k/\hbar \omega$, tähistame kette täisarvuga $n$. Tahetakse leida konstant $C_n$ järgmisest võrrandist:
+Nüüd tahetakse leida võrranditest \eqref{cepsilon} ja \eqref{cepsilon1} konstandid $C_\varepsilon$ ja $C_{\varepsilon+1}$. Kuna $\varepsilon=n+1/2 - k_1/\hbar \omega$, tähistame kette täisarvuga $n$. Tahetakse leida konstant $C_n$ järgmisest võrrandist:
 \begin{equation}
     A\ket{n}=C_n \ket{n -1}.
     \label{konstket}
@@ -375,17 +406,15 @@ Võrrandi \eqref{konstket} kaasvõrrand on
     \bra{n}A^\dagger=\bra{n-1}C_n^*.
     \label{konstbra}
 \end{equation}
-Kombineerides võrrandid \eqref{konstket} ja \eqref{konstbra} saadakse, te
+Kombineerides võrrandid \eqref{konstket} ja \eqref{konstbra} saadakse, et
 \begin{align}
-    \begin{split}
-        \braket{n|A^\dagger A|n}&=\braket{n-1|C_n^* C_n| n-1} \\
-        \braket{n|\mathcal{H}-\tfrac{1}{2}+\tfrac{k}{\hbar \omega}|n}&=C_n^* C_n \\
-        \braket{n|n|n}&=|C_n|^2 \\
-        |C_n|^2&=n \\
-        C_n&=\sqrt{n} e^{i\phi}.
-    \end{split}
+    \braket{n|A^\dagger A|n}&=\braket{n-1|C_n^* C_n| n-1} \\
+    \braket{n|\mathcal{H}-\tfrac{1}{2}+\tfrac{k_1}{\hbar \omega}|n}&=C_n^* C_n \\
+    \braket{n|n|n}&=|C_n|^2 \\
+    |C_n|^2&=n \\
+    C_n&=\sqrt{n} e^{i\phi}.
 \end{align}
-Kuna $\psi$ väärtus on vabalt valitav, siis on mugav võtta selle väärtus nulliks. Siis saadakse, et
+Kuna $\phi$ väärtus on vabalt valitav, siis on mugav võtta selle väärtus nulliks. Siis saadakse, et
 \begin{equation}
     A\ket{n}=\sqrt{n}\ket{n-1}.
 \end{equation}
@@ -393,31 +422,65 @@ Analoogselt saab näidata, et
 \begin{equation}
     A^\dagger \ket{n}=\sqrt{n+1}\ket{n+1}.
 \end{equation}
-%Vaadeldakse järgnevat hamiltooninit
-%\begin{equation}
-%    \op{H}=\op[0]{H}+\op[1]{H},
-%\end{equation}
-%kus
-%\begin{equation}
-%    \op[0]{H}=\frac{\op{p}^2}{2m}+\frac{m\omega^2 \op{x}^2}{2}
-%\end{equation}
-%ja
-%\begin{equation}
-%    \op[1]{H}=mg\op{x}
-%\end{equation}
-%Lahendid saab leida häirituse meetodiga. On teada potentsiaali
-%\begin{equation}
-%    V(x)=\frac{m\omega^2 x^2}{2}+mgx
-%\end{equation}
-%omaväärtused, kui teha asendus \(y=x+\frac{g}{\omega^2}\). Saadakse, et
-%\begin{equation}
-%    E_n=\left(n+\frac{1}{2}\right) \hbar \omega - \frac{1}{2}\frac{mg^2}{\omega^2}.
-%\end{equation}
+
+\subsection{Häiritusega harmoolinine ostsillaator gravitatsiooniväljas}
+
+Nüüd vaadatakse harmoonilist ostsillaatorit, millele on lisatud kuuphäiritus, gravitatsiooniväljas. Sellele vastav hamiltoniaan on
+\begin{equation}
+    \op{H}=\op[0]{H}+\op[1]{H},
+\end{equation}
+kus
+\begin{equation}
+    \op[1]{H}=\lambda \op{x}^3 = \lambda \left[ \sqrt{\frac{\hbar}{2m\omega}}(A^\dagger + A) - \frac{g}{\omega^2}\right]^3=\lambda \left(\frac{\hbar}{2m\omega}\right)^\frac{3}{2} (A^\dagger + A - k_2)^3,
+\end{equation}
+kus $k_2=g\sqrt{\frac{2m}{\hbar \omega^3}}$.
+Kuna sellele hamiltoniaanile vastava omaväärtusülesande täpselt lahendamine pole tõenäoliselt võimalik, siis kasutatakse häiritusteooriat. Võrrandi \eqref{parand1} järgi on esimene parand omaväärtustele
+\begin{equation}
+    E_n^1=\braket{n|\op[1]{H}|n}=\lambda \left(\frac{\hbar}{2m\omega}\right)^\frac{3}{2} \braket{n|(A^\dagger + A - k_2)^3|n}
+    \label{kuupparand1}
+\end{equation}
+Kuna $A^\dagger$ ja $A$ muudavad omaseisundit, siis peab olema neid hulkliikme $(A^\dagger + A + k_2)^3$ üksliikmes sama palju, et eelnev avaldis poleks null. Seega annavad avaldises \eqref{kuupparand1} nullist erinevad liikmed ainult üksliikmed $-k_2^3$, $-3k_2A^\dagger A$ ja $-3k_2AA^\dagger$. Järelikult
+\begin{align}
+    E_n^1&=\lambda \left(\frac{\hbar}{2m\omega}\right)^\frac{3}{2} \braket{n|-k_2^3-3k_2A^\dagger A- 3k_2 A A^\dagger|n} \nonumber \\
+    &= -\lambda \left(\frac{\hbar}{2m\omega}\right)^\frac{3}{2} (k_2^3 + 3k_2\sqrt{n}\sqrt{n} + 3k_2\sqrt{n+1}\sqrt{n+1}) \nonumber \\
+    &= -\lambda \left(\frac{\hbar}{2m\omega}\right)^\frac{3}{2} [k_2^3 + 3k_2(2n+1)] \label{uksenergia}
+\end{align}
+Võrranditest \eqref{nullenergia} ja \eqref{uksenergia} saadakse, et
+\begin{equation}
+    E_n \approx \left(n+\frac{1}{2}\right) - k_1 - \lambda \left(\frac{\hbar}{2m\omega}\right)^\frac{3}{2} [k_2^3 + 3k_2(2n+1)]
+    \label{kuupene}
+\end{equation}
+Võrranditest \eqref{part} ja \eqref{kuupene} saadakse, et statistiline summa on
+\begin{equation}
+    Z=\sum_{n=0}^{\infty} \exp\left(-\beta \left(\left(n+\frac{1}{2}\right) - k_1 - \lambda \left(\frac{\hbar}{2m\omega}\right)^\frac{3}{2} (k_2^3 + 3k_2(2n+1)) \right)\right).
+\end{equation}
+Tegu on geomeetrilise rea summaga. See koondub järgmisel tingimusel:
+\begin{equation}
+    \frac{3}{\sqrt{2}}k_2\lambda \left(\frac{\hbar}{m\omega}\right)^{\frac{3}{2}}<1
+\end{equation}
+või
+\begin{equation}
+    3 \lambda \hbar g < m \omega^3
+\end{equation}
+Selle eelduse kehtimisel on
+\begin{equation}
+    Z=\frac{\exp\left( \beta \left(  \lambda (k_2^3+3k_2)\left(\frac{\hbar}{2m\omega}\right)^{\frac{3}{2}} +k_1 -\frac{1}{2}\right)\right)}{1-\exp \left( \beta\left( 6 k_2 \lambda \left( \frac{\hbar}{2m\omega}\right)^{\frac{3}{2}} - 1 \right)\right)}
+\end{equation}
+
+%\begin{multline}
+%    \frac{2 \left( 6 k_2 \lambda \left(\frac{\hbar}{2m \omega}\right)^\frac{3}{2}-1\right)^{2} \exp\left(\beta  \left( \frac{\left( {{{k_2}}^{3}}+3 {k_2}\right)  \lambda  {{\left( \frac{\hbar }{m \omega }\right) }^{\frac{3}{2}}}}{{{2}^{\frac{3}{2}}}}+ k_1 - \frac{1}{2}\right) +3 \sqrt{2} {k_2} \beta  \lambda  {{\left( \frac{\hbar }{m \omega }\right) }^{\frac{3}{2}}}-2 \beta \right)}{{{\left( 1-{\exp{\frac{3 {k_2} \beta  \lambda  {{\left( \frac{\hbar }{m \omega }\right) }^{\frac{3}{2}}}}{\sqrt{2}}-\beta }}\right) }^{3}}} +\\
+%    \frac{\left( \frac{3 {k_2} \lambda  {{\left( \frac{\hbar }{m \omega }\right) }^{\frac{3}{2}}}}{\sqrt{2}}-1\right)  \left( \frac{\left( {{{k_2}}^{3}}+3 {k_2}\right)  \lambda  {{\left( \frac{\hbar }{m \omega }\right) }^{\frac{3}{2}}}}{{{2}^{\frac{3}{2}}}}+\frac{3 {k_2} \lambda  {{\left( \frac{\hbar }{m \omega }\right) }^{\frac{3}{2}}}}{\sqrt{2}}+{k_1}-\frac{3}{2}\right)  {{ e}^{-\beta  \left( -\frac{\left( {{{k_2}}^{3}}+3 {k_2}\right)  \lambda  {{\left( \frac{\hbar }{m \omega }\right) }^{\frac{3}{2}}}}{{{2}^{\frac{3}{2}}}}-{k_1}+\frac{1}{2}\right) +\frac{3 {k_2} \beta  \lambda  {{\left( \frac{\hbar }{m \omega }\right) }^{\frac{3}{2}}}}{\sqrt{2}}-\beta }}}{{{\left( 1-{{ e}^{\frac{3 {k_2} \beta  \lambda  {{\left( \frac{\hbar }{m \omega }\right) }^{\frac{3}{2}}}}{\sqrt{2}}-\beta }}\right) }^{2}}}+ \\
+%    \frac{\left( \frac{3 {k_2} \lambda  {{\left( \frac{\hbar }{m \omega }\right) }^{\frac{3}{2}}}}{\sqrt{2}}-1\right)  \left( \frac{\left( {{{k_2}}^{3}}+3 {k_2}\right)  \lambda  {{\left( \frac{\hbar }{m \omega }\right) }^{\frac{3}{2}}}}{{{2}^{\frac{3}{2}}}}+{k_1}-\frac{1}{2}\right)  {{ e}^{-\beta  \left( -\frac{\left( {{{k_2}}^{3}}+3 {k_2}\right)  \lambda  {{\left( \frac{\hbar }{m \omega }\right) }^{\frac{3}{2}}}}{{{2}^{\frac{3}{2}}}}-{k_1}+\frac{1}{2}\right) +\frac{3 {k_2} \beta  \lambda  {{\left( \frac{\hbar }{m \omega }\right) }^{\frac{3}{2}}}}{\sqrt{2}}-\beta }}}{{{\left( 1-{{ e}^{\frac{3 {k_2} \beta  \lambda  {{\left( \frac{\hbar }{m \omega }\right) }^{\frac{3}{2}}}}{\sqrt{2}}-\beta }}\right) }^{2}}}+ \\
+%    \frac{{{\left( \frac{\left( {{{k_2}}^{3}}+3 {k_2}\right)  \lambda  {{\left( \frac{\hbar }{m \omega }\right) }^{\frac{3}{2}}}}{{{2}^{\frac{3}{2}}}}+{k_1}-\frac{1}{2}\right) }^{2}} {{ e}^{-\beta  \left( -\frac{\left( {{{k_2}}^{3}}+3 {k_2}\right)  \lambda  {{\left( \frac{\hbar }{m \omega }\right) }^{\frac{3}{2}}}}{{{2}^{\frac{3}{2}}}}-{k_1}+\frac{1}{2}\right) }}}{1-{{ e}^{\frac{3 {k_2} \beta  \lambda  {{\left( \frac{\hbar }{m \omega }\right) }^{\frac{3}{2}}}}{\sqrt{2}}-\beta }}}
+%\end{multline}
+
 
 \addchap{Kokkuvõte}
 
 % \nocite{*}
 \printbibliography
+\addchap{Abstract}
+\addchap{Resümee}
 \kinnitusleht
 
-    \end{document}
+\end{document}

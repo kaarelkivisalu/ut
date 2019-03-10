@@ -63,11 +63,11 @@ Enamiku materjalide jaoks on \(\alpha > 0\), millest tulenevalt \(C_A>C_B\). Jä
 
 \section{Tavapärane lahendus ja selle termodünaamika II seaduse rikkumine}
 
-Tavapärases lahenduses kaudselt eeldatakse, et keha siseenergia \(U\) ja raadius \(R\) sõltuvad ainult temperatuurist \(T\), mitte aga raskuskiirendusest \(g\). Vaadeltakse järgnevat tsüklit: pall asub horisontaalsel külmal tasandil temperatuuriga \(T_1\); pall ühendatakse soojema reservaariga, mille temperatuur \(T_2=T_1+dT>T_1\); pall riputatakse nööri külge ja horisontaalne tasand eemaldatakse; pall ühendatakse külma revervuaariga, mille temperatuur on \(T_1\). Selle protsessi kasutegur on tehtud töö ja neeldunud soojuse suhe ning avaldub kujul \cite{palma15}
+Tavapärases lahenduses kaudselt eeldatakse, et keha siseenergia \(U\) ja raadius \(R\) sõltuvad ainult temperatuurist \(T\), mitte aga raskuskiirendusest \(g\). Vaadeltakse järgnevat tsüklit: pall asub horisontaalsel külmal tasandil temperatuuriga \(T_1\); pall ühendatakse soojema reservuaariga, mille temperatuur \(T_2=T_1+dT>T_1\); pall riputatakse nööri külge ja horisontaalne tasand eemaldatakse; pall ühendatakse külma reservuaariga, mille temperatuur on \(T_1\). Selle protsessi kasutegur on tehtud töö ja neeldunud soojuse suhe ning avaldub kujul \cite{palma15}
 \begin{equation}
     \eta = \frac{2mg\alpha R}{C_0+mg\alpha R}.
 \end{equation}
-Kasutegur \(\eta\) ei sõltu \(dT\) suurusest. Termodünaamika teist seadus saab sõastada järgnevalt: iga tsükkel, mis töötab ainult temperatuuride \(T_1\) ja \(T_2\) juures ei saa olla effektiivsem Carnot' tsüklist, mis töötab samade temperatuuride juures. Carnot' tsükli efektiivsus on
+Kasutegur \(\eta\) ei sõltu \(dT\) suurusest. Termodünaamika teist seadus saab sõastada järgnevalt: iga tsükkel, mis töötab ainult temperatuuride \(T_1\) ja \(T_2\) juures ei saa olla efektiivsem Carnot' tsüklist, mis töötab samade temperatuuride juures. Carnot' tsükli efektiivsus on
 \begin{equation}
     \eta_{Carnot'} = \frac{dT}{T_2}
 \end{equation}
@@ -87,9 +87,9 @@ Kasutades statistilise mehaanika meetodeid on võimalik leida kera soojusmahtuvu
 \end{equation}
 kus \(C\) on soojusmahtuvus, \(g\) on raskuskiirenuds, \(m\) on kera mass, \(T\) on kera temperatuur, \(Y\) on massikeskme kõrgus, \(\alpha\) on lineaarne soojuspaisumistegur.
 
-%\section{Schroedingeri vorrand}
+%\section{Schrödingeri võrrand}
 %
-%Ajast sõltumatu Scröendingeri võrrand ühes dimensioonis avaldub kujul \cite{griffiths05}
+%Ajast sõltumatu Schrödingeri võrrand ühes dimensioonis avaldub kujul \cite{griffiths05}
 %\begin{equation}
 %    \op{H} \Psi = E \Psi,
 %\end{equation}
@@ -99,7 +99,7 @@ kus \(C\) on soojusmahtuvus, \(g\) on raskuskiirenuds, \(m\) on kera mass, \(T\)
 %\end{equation}
 
 \section{Energiatasemed ja soojusmahtuvus}
-Kvantmehaanilises statistlilises mehaanikas on mugav kasutada tihedasmaatriksit (ingl \textit{density matrix}) $\op{\rho}$ kvantmehaanilise operaatori ooteväärtuse (ingl \textit{expectation value}) leidmiseks.
+Kvantmehaanilises statistilises mehaanikas on mugav kasutada tihedusmaatriksit (ingl \textit{density matrix}) $\op{\rho}$ kvantmehaanilise operaatori ooteväärtuse (ingl \textit{expectation value}) leidmiseks.
 Tihedusmaatriks on defineeritud järgnevalt \parencite[172]{kardar07}:
 \begin{equation}
     \op{\rho}(t) \equiv \sum_j p_j \ket{\Psi_j(t)} \bra{\Psi_j(t)},
@@ -244,7 +244,7 @@ Käesolevas osas leitakse konkreetsetele võimalikele kera potentsiaalidele vast
 Kuigi tegelik kera potentsiaal on keeruline võib anda konkreetne potentsiaal küllaltki täpse lahendi.
 
 \section{Tükiti lineaarne potentsiaal}
-Vaadeltakse potentsiaali kujuga
+Vaadeldakse potentsiaali kujuga
 \begin{equation}
     V(x)=\begin{cases}
         (-a+mg)x, & x<0,\\
@@ -281,27 +281,138 @@ Kui $\beta c\ll 1$, siis saab summa asendada integraaliga ja $n+\frac{1}{2}\appr
 \end{equation}
 
 \section{Häiritusega harmooniline ostsillaator}
-Vaadeldakse järgnevat hamiltooninit
+Siin osas vaadeltakse harmoonilist ostsillaatorit, millele on lisatud kuuphäiritus, gravitatsiooniväljas. Selleks, et leida häirituse mõju süsteemile lahendatakse kõigepealt omaväärtusprobleem harmoonilise ostsillatori jaoks gravitatsiooniväljas. Sellele vastav hamiltoonian on
 \begin{equation}
-    \op{H}=\op[0]{H}+\op[1]{H},
+    \op[0]{H}=\frac{\op{p}^2}{2m}+\frac{m\omega^2 \op{x}^2}{2} + mg\op{x}=\hbar \omega (A A^\dagger + 1/2)-k,
 \end{equation}
-kus
+kus $k=\frac{mg^2}{2\omega^2}$ ja
+\begin{align}
+    \begin{split}
+        A &= \sqrt{\frac{m\omega}{2\hbar}}\left[ \left( \op{x} + \frac{g}{\omega^2} \right) + \frac{i}{m\omega} \op{p} \right], \\
+        A^\dagger &= \sqrt{\frac{m\omega}{2\hbar}}\left[ \left( \op{x} + \frac{g}{\omega^2} \right) - \frac{i}{m\omega} \op{p} \right],
+    \end{split}
+\end{align}
+$A^\dagger$ on $A$ kaasoperaator.
+Defineeritakse operaator $\mathcal{H}$ järgnevalt:
 \begin{equation}
-    \op[0]{H}=\frac{\op{p}^2}{2m}+\frac{m\omega^2 \op{x}^2}{2}
+    \mathcal{H} = \frac{\op[0]{H}}{\hbar \omega}=(A^\dagger A + 1/2)-\frac{k}{\hbar \omega}.
+    \label{mathcalH}
 \end{equation}
-ja
+Tahetakse leida omaväärtused järgmisele võrrandile:
 \begin{equation}
-    \op[1]{H}=mg\op{x}
+    \mathcal{H}\ket{\varepsilon}=\varepsilon \ket{\varepsilon}.
 \end{equation}
-<++>
-Lahendid saame leida häirituse meetodiga. On lihtne potentsiaali
+Kehtivad järgnevad kasulikud omadused:
+\begin{align}
+    \left[A, A^\dagger\right] &= 1, \\
+    \left[A, \mathcal{H}\right] &=A, \\
+    \left[A^\dagger, \mathcal{H}\right] &= -A^\dagger.
+\end{align}
+Operaatorid $A$ ja $A^\dagger$ on kasulikud kuna need genereerivad uusi omaseisundeid. Kuna
+\begin{align}
+    \begin{split}
+        \mathcal{H}A\ket{\varepsilon}&=\left(A\mathcal{H}-[A, \mathcal{H}]\right)\ket{\varepsilon}\\
+        &=(A\mathcal{H}-A)\ket{\varepsilon}\\
+        &=(\varepsilon - 1)A\ket{\varepsilon},
+    \end{split}
+\end{align}
+siis peab oleama $A\ket{\varepsilon}$ omaseisundeid omaväärtusega $\varepsilon - 1$, st
 \begin{equation}
-    V(x)=\frac{m\omega^2 x^2}{2}+mgx
+    A\ket{\varepsilon}=C_\varepsilon \ket{\varepsilon -1},
+    \label{cepsilon}
 \end{equation}
-omaväärtused, kui teha asendus \(y=x+\frac{g}{\omega^2}\). Saadakse, et
+kus $C_\varepsilon$ on konstant ja $\ket{\varepsilon -1}$ ja $\ket{\varepsilon}$ on normaliseeritud omaketid.
+Sarnaselt nähakse, et
+\begin{align}
+    \begin{split}
+        \mathcal{H}A^\dagger\ket{\varepsilon}&=\left(A^\dagger\mathcal{H}-[A^\dagger, \mathcal{H}]\right)\ket{\varepsilon}\\
+        &=(A^\dagger\mathcal{H}+A^\dagger)\ket{\varepsilon}\\
+        &=(\varepsilon + 1)A^\dagger\ket{\varepsilon},
+    \end{split}
+\end{align}
+nii et
 \begin{equation}
-    E_n=\left(n+\frac{1}{2}\right) \hbar \omega - \frac{1}{2}\frac{mg^2}{\omega^2}.
+    A^\dagger\ket{\varepsilon}=C_{\varepsilon+1} \ket{\varepsilon+1}.
+    \label{cepsilon1}
 \end{equation}
+Kuna $\mathcal{H}$ omaväärtused ei saa lõputult väheneda, siis peab olema seisund $\ket{\varepsilon_0}$, mida ei saa enam alandada:
+\begin{equation}
+    A\ket{\varepsilon_0}=0.
+    \label{nullseis}
+\end{equation}
+Korrutades võrrandi \eqref{nullseis} läbi operaatoriga $A^\dagger$ saadakse, et
+\begin{equation}
+    A^\dagger A\ket{\varepsilon_0}=0.
+    \label{aanull}
+\end{equation}
+Võrranditest \eqref{mathcalH} ja \eqref{aanull} saadakse, et
+\begin{equation}
+    \left(\mathcal{H}-1/2 + \frac{k}{\hbar \omega} \right)\ket{\varepsilon_0}=0
+\end{equation}
+või
+\begin{equation}
+    \mathcal{H}\ket{\varepsilon_0}=\left(\frac{1}{2} - \frac{k}{\hbar \omega}\right) \ket{\varepsilon_0}
+\end{equation}
+või
+\begin{equation}
+    \varepsilon_0=\frac{1}{2} - \frac{k}{\hbar \omega}.
+\end{equation}
+Kasutades operaatorit $A^\dagger$ korduvalt saab suurendada seisundit $\ket{\varepsilon_0}$ lõputult. Seega avalduvad ostsillatori energiatasemed järgnevalt:\footnote{Kuna ühes dimensioonis pole kidumist, siis on ainsad energiatasemed \parencite[176-177]{shankar94}.}
+\begin{equation}
+    \varepsilon_n=\left(n+\frac{1}{2}\right)-\frac{k}{\hbar \omega}, \qquad n=0, 1, 2,\dots
+\end{equation}
+või
+\begin{equation}
+    E_n=\hbar \omega \left(n+\frac{1}{2}\right)-k, \qquad n=0, 1, 2,\dots
+\end{equation}
+Nüüd tahetakse leida võrranditest \eqref{cepsilon} ja \eqref{cepsilon1} konstandid $C_\varepsilon$ ja $C_{\varepsilon+1}$. Kuna $\varepsilon=n+1/2 - k/\hbar \omega$, tähistame kette täisarvuga $n$. Tahetakse leida konstant $C_n$ järgmisest võrrandist:
+\begin{equation}
+    A\ket{n}=C_n \ket{n -1}.
+    \label{konstket}
+\end{equation}
+Võrrandi \eqref{konstket} kaasvõrrand on
+\begin{equation}
+    \bra{n}A^\dagger=\bra{n-1}C_n^*.
+    \label{konstbra}
+\end{equation}
+Kombineerides võrrandid \eqref{konstket} ja \eqref{konstbra} saadakse, te
+\begin{align}
+    \begin{split}
+        \braket{n|A^\dagger A|n}&=\braket{n-1|C_n^* C_n| n-1} \\
+        \braket{n|\mathcal{H}-\tfrac{1}{2}+\tfrac{k}{\hbar \omega}|n}&=C_n^* C_n \\
+        \braket{n|n|n}&=|C_n|^2 \\
+        |C_n|^2&=n \\
+        C_n&=\sqrt{n} e^{i\phi}.
+    \end{split}
+\end{align}
+Kuna $\psi$ väärtus on vabalt valitav, siis on mugav võtta selle väärtus nulliks. Siis saadakse, et
+\begin{equation}
+    A\ket{n}=\sqrt{n}\ket{n-1}.
+\end{equation}
+Analoogselt saab näidata, et
+\begin{equation}
+    A^\dagger \ket{n}=\sqrt{n+1}\ket{n+1}.
+\end{equation}
+%Vaadeldakse järgnevat hamiltooninit
+%\begin{equation}
+%    \op{H}=\op[0]{H}+\op[1]{H},
+%\end{equation}
+%kus
+%\begin{equation}
+%    \op[0]{H}=\frac{\op{p}^2}{2m}+\frac{m\omega^2 \op{x}^2}{2}
+%\end{equation}
+%ja
+%\begin{equation}
+%    \op[1]{H}=mg\op{x}
+%\end{equation}
+%Lahendid saab leida häirituse meetodiga. On teada potentsiaali
+%\begin{equation}
+%    V(x)=\frac{m\omega^2 x^2}{2}+mgx
+%\end{equation}
+%omaväärtused, kui teha asendus \(y=x+\frac{g}{\omega^2}\). Saadakse, et
+%\begin{equation}
+%    E_n=\left(n+\frac{1}{2}\right) \hbar \omega - \frac{1}{2}\frac{mg^2}{\omega^2}.
+%\end{equation}
 
 \addchap{Kokkuvõte}
 

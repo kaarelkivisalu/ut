@@ -1,5 +1,6 @@
 \documentclass{trkut}% Reaalkooli vormistus. Muidu "report" või "article".
 \usepackage[style=trkut]{biblatex}% Kasutatud kirjanduse genereerimine
+\usepackage{listings}
 \usepackage{mleftright, braket}
 \addbibresource{viited_kaarel_kivisalu.bib}% Viidete info fail
 \defbibheading{bibliography}{\addchap{#1}}% Lisame kasutatud materjalid sisukorda
@@ -19,6 +20,12 @@
 \renewcommand\Ket[1]{\mleft|#1\mright\rangle}
 \renewcommand\braket[1]{\langle{#1}\rangle}
 \reversemarginpar
+
+\lstdefinelanguage{Maxima}{
+keywords={sum, subst, diff, plot3d, log},
+sensitive=true,
+comment=[n][\itshape]{/*}{*/}
+}
 
 \begin{document}
 \maketitle% Tiitelleht
@@ -479,6 +486,23 @@ Selle eelduse kehtimisel on
 
 % \nocite{*}
 \printbibliography
+\addchap{Lisa 1 Maxima kood}
+\begin{lstlisting}[language=Maxima, breaklines=true]
+(%i1)	E_n: (3^(2/3)*%pi^(2/3)*(g^2*m^2+b*g*m-a*g*m-a*b)^(2/3)*(2*n+1)^(2/3)*hbar^(2/3))/(2^(5/3)*(b+a)^(2/3)*m^(1/3));
+(E_n)	(3^(2/3)*%pi^(2/3)*(g^2*m^2+b*g*m-a*g*m-a*b)^(2/3)*(2*n+1)^(2/3)*hbar^(2/3))/(2^(5/3)*(b+a)^(2/3)*m^(1/3))
+(%i2)	Z: sum(%e^(-E_n*beta), n, 0, 400)$
+(%i3)	diff(log(Z), beta, 1)$
+(%i4)	subst(1/(k_B*T), beta, %o3)$
+(%i5)	diff(%o4, T, 1)$
+(%i6)	C: -%o5$
+(%i7)	subst(1,m,C)$
+(%i8)	subst(1,a,%o7)$
+(%i9)	subst(1,b,%o8)$
+(%i10)	subst(1.38064852e-23,k_B,%o9)$
+(%i11)	subst(1.054571800e-34,hbar,%o10)$
+(%i12)	plot3d(%o11, [g,-0.9,0.9], [T,0,1], [grid, 50, 50], [zlabel, "C"], [gnuplot_pm3d,true]);
+\end{lstlisting}
+
 \addchap{Abstract}
 \addchap{Resümee}
 \kinnitusleht

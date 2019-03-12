@@ -24,7 +24,6 @@
 \lstdefinelanguage{Maxima}{
 keywords={sum, subst, diff, plot3d, log},
 sensitive=true,
-comment=[n][\itshape]{/*}{*/}
 }
 
 \begin{document}
@@ -34,7 +33,7 @@ comment=[n][\itshape]{/*}{*/}
 \nummerdame% See käsk peab olema õigeks nummerdamiseks kohe peale sissejuhatust
 I rahvusvahelisel füüsikaolümpiaadil 1967. aastal oli järgnev ülesanne \parencite[6]{ipho67}:
 
-\textit{Kaks homogeenset ühesugust kera on sama algtemperatuuriga. Üks kera on liikumatult horisontaalse tasandil, teine ripub niidi küljes. Mõlemale kerale antakse võrdne soojushulk. Kas kerade lõpptemperatuur on sama või mitte. Soojuskadudega mitte arvestada.}
+\textit{Kaks homogeenset ühesugust kera on sama algtemperatuuriga. Üks kera on liikumatult horisontaalse tasandil, teine ripub niidi küljes. Mõlemale kerale antakse võrdne soojushulk. Kas kerade lõpptemperatuur on sama või mitte? Soojuskadudega mitte arvestada.}
 
 Selle ülesande algses lahenduses leiti, et enamiku materjalide jaoks on on horisontaalsel tasandil oleva kera soojusmahtuvus on suurem riputatud kera omast.
 St, et tasandil oleva kera temperatuur on pärast soojushulga andmist väiksem.
@@ -165,7 +164,7 @@ kus \(C\) on soojusmahtuvus, \(g\) on raskuskiirenuds, \(m\) on kera mass, \(T\)
 
 \section{Kvaasi-klassikaline lähendus}
 
-Schrödingeri võrrandi
+Ajast sõltumatu Schrödingeri võrrandi ühes dimensioonis
 \begin{equation}
     -\frac{\hbar^2}{2m}\frac{d^2\psi}{dx^2}+V(x)\psi=E\psi
 \end{equation}
@@ -269,10 +268,22 @@ On võimalik leida ka kõrgemat järku energia parandid, kuid neid käesolevas t
 
 \chapter{Soojusmahtuvus erinevate potentsiaalide korral}
 
-%Kuna olümpiaadiülesandes oleva kera potentsiaal on väga keeriline, siis on vaja soojusmahtuvuse leidmiseks teha lihtsustusi.
-%Järgnevalt vaadatakse süsteeme, millest võib mõelda kui kehadest, mis on vedruga kinnitatud pinna külge.
-%Vedru siht ühtib gravitatsiooniväljaga.
-%Süsteemi potentsiaal sõltub vedru jäikusest.
+\section{Mudeli kurjeldus}
+Kuna olümpiaadiülesandes oleva kera potentsiaal on väga keeriline, siis on vaja soojusmahtuvuse leidmiseks teha lihtsustusi.
+Kera vaatamise asemel vaadatakse süsteemi, kus mingid osakesed on fikseeritud ja on üks ühes dimensioonis vabalt liikuv osake.
+Osakestevahelise vastastikmõju tõttu sõltub süsteemi energia vabalt liikuva osakese asukohast.
+Sellist vastastikmõju saab kirjeldada Schrödingeri võrrandiga, kus potentsiaal sõltub osakeste paigutusest.
+Selline mudel vastab näiteks kaheaatomilise molekulile.
+Madalatel energiatel on selle potentsiaal ligikaudu sama harmoonilise ostsillaatori potentsiaalga.
+Kuupparandi lisamine teeb potentsiaali veelgi täpsemaks.
+
+Järgnevalt vaadatakse süsteeme, kus osake liigub gravitatsiooniväljaga samas dimensioonis.
+Gravitatsiooniväli muudab lineaarselt ühe osakese energiat ja seega lisandub süsteemi potentsiaalile lineaarne potentsiaal.
+Kera jaoks oleks võimalik seda mudelit laiendada piirates osakeste asukoha kera sisse ja võttest potentsiaali ajas muutuvaks.
+Praktikas poleks aga kera jaoks sellist mudelit võimalik kasutada, kuna analüütiliselt on väga keeruline juba kahest osakesest koosnevat süseemi kirjalda.
+Samuti ei suuda tänapäevased arvutid simuleerida mõistliku aja piires hea täpsusega juba küllaltki väikse osakeste arvuga süsteeme.
+
+
 
 \section{Tükiti lineaarne potentsiaal}
 Vaadeldakse potentsiaali kujuga
@@ -583,6 +594,9 @@ Kuna soojusmahtuvus muutub lubatud $g$ muutumispiirkonnas väga vähe, siis on j
 %    \frac{\left( \frac{3 {k_2} \lambda  {{\left( \frac{\hbar }{m \omega }\right) }^{\frac{3}{2}}}}{\sqrt{2}}-1\right)  \left( \frac{\left( {{{k_2}}^{3}}+3 {k_2}\right)  \lambda  {{\left( \frac{\hbar }{m \omega }\right) }^{\frac{3}{2}}}}{{{2}^{\frac{3}{2}}}}+{k_1}-\frac{1}{2}\right)  {{ e}^{-\beta  \left( -\frac{\left( {{{k_2}}^{3}}+3 {k_2}\right)  \lambda  {{\left( \frac{\hbar }{m \omega }\right) }^{\frac{3}{2}}}}{{{2}^{\frac{3}{2}}}}-{k_1}+\frac{1}{2}\right) +\frac{3 {k_2} \beta  \lambda  {{\left( \frac{\hbar }{m \omega }\right) }^{\frac{3}{2}}}}{\sqrt{2}}-\beta }}}{{{\left( 1-{{ e}^{\frac{3 {k_2} \beta  \lambda  {{\left( \frac{\hbar }{m \omega }\right) }^{\frac{3}{2}}}}{\sqrt{2}}-\beta }}\right) }^{2}}}+ \\
 %    \frac{{{\left( \frac{\left( {{{k_2}}^{3}}+3 {k_2}\right)  \lambda  {{\left( \frac{\hbar }{m \omega }\right) }^{\frac{3}{2}}}}{{{2}^{\frac{3}{2}}}}+{k_1}-\frac{1}{2}\right) }^{2}} {{ e}^{-\beta  \left( -\frac{\left( {{{k_2}}^{3}}+3 {k_2}\right)  \lambda  {{\left( \frac{\hbar }{m \omega }\right) }^{\frac{3}{2}}}}{{{2}^{\frac{3}{2}}}}-{k_1}+\frac{1}{2}\right) }}}{1-{{ e}^{\frac{3 {k_2} \beta  \lambda  {{\left( \frac{\hbar }{m \omega }\right) }^{\frac{3}{2}}}}{\sqrt{2}}-\beta }}}
 %\end{multline}
+
+\section{Järeldused}
+
 
 
 \addchap{Kokkuvõte}

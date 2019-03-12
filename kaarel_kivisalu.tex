@@ -5,7 +5,7 @@
 \addbibresource{viited_kaarel_kivisalu.bib}% Viidete info fail
 \defbibheading{bibliography}{\addchap{#1}}% Lisame kasutatud materjalid sisukorda
 
-\pealkiri{Gravitatsiooni mõju kera soojusmahtuvusele}
+\pealkiri{Gravitatsiooni mõju osakesete soojusmahtuvusele erinevates potentsiaalides}
 \autor{Kaarel Kivisalu}
 \klass{11. a}
 \juhendaja{prof Jaan Kalda \\ õp Toomas Reimann}
@@ -36,23 +36,33 @@ I rahvusvahelisel füüsikaolümpiaadil 1967. aastal oli järgnev ülesanne \par
 
 \textit{Kaks homogeenset ühesugust kera on sama algtemperatuuriga. Üks kera on liikumatult horisontaalse tasandil, teine ripub niidi küljes. Mõlemale kerale antakse võrdne soojushulk. Kas kerade lõpptemperatuur on sama või mitte. Soojuskadudega mitte arvestada.}
 
+Selle ülesande algses lahenduses leiti, et enamiku materjalide jaoks on on horisontaalsel tasandil oleva kera soojusmahtuvus on suurem riputatud kera omast.
+St, et tasandil oleva kera temperatuur on pärast soojushulga andmist väiksem.
+Hiljuti leiti Palma ja Sormani poolt, et efekt on hoopis vastupidine ja algne lahendus rikub termodünaamika II seadust.
+Samasugune tulemus saadi kasutades statistilist mehaanikat ja klassikalist termodünaamikat.
+Mõlemad lahendused seovad omavahel soojusmahtuvuse ja lineaarse soojuspaisumisteguri.
+
+Käesolevas uurimistöös vaadatakse sarnast süsteemi
 Käesolevas töös uuritakse konkreetsete potentsiaalide korral konstantse gravitatsioonvälja mõju kerale sarnase, kuid lihtsustatud, süsteemi soojusmahtuvusele.
+Täpsemalt vaatatakse ühes dimensioonis
 Konstantse gravitatsioonivälja potentsiaal on lineaarne ja see selle saab liita süsteemi potentsiaalile.
 Vaadatakse soojusmahtuvuse erinevust juhtudel, kui on ainult süsteemi potentsiaal ja kera potentsiaalile on lisatud lineaarne gravitatsioonivälja potentsiaal.
 Käesolevas töös üritatakse siduda soojusmahtuvust ja süsteemi mikroparameetreid.
 
 Töös on analüüsitud kuuppolünoompotentsiaali häirituse meetodil ja tükiti lineaarsestest funktsioonist koosnevat potentsiaali kvaasi-klassikaliselt.
 
-Varem on uuritud gravitatsiooni mõju metallkera soojusmahtuvusele Palma ja Sormani poolt \parencite{palma15}.
-Leiti üldine seos soojusmahtuvuse, temperatuuri, gravitatsioonivälja tugevuse ja lineaarse soojuspaisumisteguri vahel.
-Saadud tulemust on eksperimentaalselt väga raske kinnitada, kuna gravitatsiooni mõju on väga väike.
+%Varem on uuritud gravitatsiooni mõju metallkera soojusmahtuvusele Palma ja Sormani poolt \parencite{palma15}.
+%Leiti üldine seos soojusmahtuvuse, temperatuuri, gravitatsioonivälja tugevuse ja lineaarse soojuspaisumisteguri vahel.
+%Saadud tulemust on eksperimentaalselt väga raske kinnitada, kuna gravitatsiooni mõju on väga väike.
 %Konkreetsete potentsiaalide läbivaatamine tõstaks ka varem leitud mudeli usaldusväärsust.
 
-Uurimistöö hüpotees on, et sõltuvalt valitud potentsiaalist võib gravitatsioonväli nii tõsta kui ka langetada keha soojusmahtuvust.
+Töö hüpoteesiks on, et sõltuvalt valitud potentsiaalist võib gravitatsioonväli nii tõsta kui ka langetada keha soojusmahtuvust. Varem tehtud uurimistöös Palma ja Sormani poolt leiti, et \parencite{palma15}.
 \addchap{Tähiste loetelu}
-\chapter{Teoreetiline osa}
+\chapter{Ülevaade kirjandusest ja teooriast}
 
-\section{Olümpiaadiülesande algne lahendus}
+%Siin peatükis on välja toodud olümpiaadiülesande algne lahendus ja põhjendatud, miks see rikub termodünaamika II seadust (osad \ref{algne} ja \ref{rikub}).
+%Samuti on välja toodud alternatiivse lahendusega saadud tulemus (vt võrrand \eqref{palmasor}).
+\section{Olümpiaadiülesande algne lahendus} \label{algne}
 
 Algne lahendus põhineb soojuspaisumisega seotud erinevustel. Kerale $A$ soojust andes see paisub ja selle massikese tõuseb. Järelikult peab osa kerale A antavast soojushulgast kuluma kera massikeskme gravitatsioonilise potentsiaalse energia tõstmiseks ja lõpptemperatuur on madalam algsest. Vastupidiselt, kera $B$ massikese langeb soojuspaisumise tõttu ja energiat saadakse juurde, järelikult on kera $B$ lõpptemperatuur kõrgem. \parencite[6-7]{ipho67}
 
@@ -70,7 +80,7 @@ Analgoselt saame, et kera \(B\) soojusmahtuvus on
 \end{equation}
 Enamiku materjalide jaoks on \(\alpha > 0\), millest tulenevalt \(C_A>C_B\). Järelikult on tavapärase lahenduse kohaselt kera \(A\) lõpptemperatuur madalam kera \(B\) lõpptemperatuurist.
 
-\section{Algne lahendus rikub termodünaamika II seadust}
+\section{Algne lahendus rikub termodünaamika II seadust} \label{rikub}
 
 Tavapärases lahenduses kaudselt eeldatakse, et keha siseenergia \(U\) ja raadius \(R\) sõltuvad ainult temperatuurist \(T\), mitte aga raskuskiirendusest \(g\). Vaadeltakse järgnevat tsüklit: pall asub horisontaalsel külmal tasandil temperatuuriga \(T_1\); pall ühendatakse soojema reservuaariga, mille temperatuur \(T_2=T_1+dT>T_1\); pall riputatakse nööri külge ja horisontaalne tasand eemaldatakse; pall ühendatakse külma reservuaariga, mille temperatuur on \(T_1\). Selle protsessi kasutegur on tehtud töö ja neeldunud soojuse suhe ning avaldub kujul \parencite[3-5]{palma15}
 \begin{equation}
@@ -89,8 +99,6 @@ Järelikult, kui \(dT\) on piisavalt väike, siis on palliga tsükli kasutegur s
 %    \label{iphojoonis}% Selle järgi viidatakse, see rida peab olema pärast \caption
 %\end{figure}
 
-\section{Statistiline mehaanika}
-
 %\section{Schrödingeri võrrand}
 %
 %Ajast sõltumatu Schrödingeri võrrand ühes dimensioonis avaldub kujul \cite{griffiths05}
@@ -102,7 +110,7 @@ Järelikult, kui \(dT\) on piisavalt väike, siis on palliga tsükli kasutegur s
 %    \op{H}=-\frac{\hbar^2}{2m}\frac{d^2}{dx^2}+V(x).
 %\end{equation}
 
-\section{Energiatasemed ja soojusmahtuvus}
+\section{Statistiline mehaanika}
 Kvantmehaanilises statistilises mehaanikas on mugav kasutada tihedusmaatriksit (ingl \textit{density matrix}) $\op{\rho}$ kvantmehaanilise operaatori ooteväärtuse (ingl \textit{expectation value}) leidmiseks.
 Tihedusmaatriks on defineeritud järgnevalt \parencite[172]{kardar07}:
 \begin{equation}
@@ -115,7 +123,7 @@ Selles formalismis avaldub kvantmehaanilise operaatori ooteväärtuse ansambli k
     \overline{\braket{\op{O}}}=\tr(\op{\rho}\op{O}),
     \label{ootev}
 \end{equation}
-kus jälg (ingl \textit{trace}) $\tr(\op{A}) \equiv \sum_n \braket{n|\op{A}|n}$\footnote{\url{http://en.citizendium.org/wiki/Trace_\%28mathematics\%29} lõputu dimensioon converges} \parencite{viide}.
+kus jälg (ingl \textit{trace}) $\tr(\op{A}) \equiv \sum_n \braket{n|\op{A}|n}$. %\footnote{\url{http://en.citizendium.org/wiki/Trace_\%28mathematics\%29} lõputu dimensioon converges} \parencite{viide}.
 Kanoonilise ansambli\footnote{Ansambel, kus süsteem on soojuslikus tasakaalus fikseeritud temperatuuriga reservuaariga.} jaoks, mis on kvantmehaaniline ja diskreetne, avaldub kanooniline tihedusmaatriks järgnevalt \parencite[174]{kardar07}:
 \begin{equation}
     \op{\rho}(\beta) = \frac{e^{-\beta \op{H}}}{Z(\beta)},
@@ -149,7 +157,7 @@ Kombineerides võrrandeid \eqref{keskham} ja \eqref{soojuham} saadakse, et
 \end{equation}
 
 Kasutades selles osas saadud seoseid on võimalik leida kera soojusmahtuvuse sõltuvus gravitatsioonist \parencite[10-13]{palma15}:
-\begin{equation}
+\begin{equation} \label{palmasor}
     \frac{\partial C(g,T)}{\partial g} = -mTY \left( \alpha^2 + \frac{\partial \alpha}{\partial T} \right),
 \end{equation}
 kus \(C\) on soojusmahtuvus, \(g\) on raskuskiirenuds, \(m\) on kera mass, \(T\) on kera temperatuur, \(Y\) on massikeskme kõrgus, \(\alpha\) on lineaarne soojuspaisumistegur.
@@ -242,11 +250,12 @@ Korrutades võrrandi \eqref{terms1} mõlemad pooled $\bra{n^0}$-ga ning kasutade
     E_n^1=\braket{n^0|\op[1]{H}|n^0}.
     \label{parand1}
 \end{equation}
-\marginpar{Kas oleks vaja tuletuskäiku?}Sarnaselt on võimalik saada teist järku parand energiale, mis avaldub kujul \parencite[451-453]{shankar94}:
-\begin{equation}
-    E_n^2=\sum_{m \neq n} \frac{|\braket{n^0|\op[1]{H}|m^0}|^2}{E_n^0-E_m^0}
-    \label{parand2}
-\end{equation}
+On võimalik leida ka kõrgemat järku energia parandid, kuid neid käesolevas töös ei kasutata ja tuletuskäiku nende jaoks ei hakata välja tooma.
+%\marginpar{Kas oleks vaja tuletuskäiku?}Sarnaselt on võimalik saada teist järku parand energiale, mis avaldub kujul \parencite[451-453]{shankar94}:
+%\begin{equation}
+%    E_n^2=\sum_{m \neq n} \frac{|\braket{n^0|\op[1]{H}|m^0}|^2}{E_n^0-E_m^0}
+%    \label{parand2}
+%\end{equation}
 
 %Häirituse teooria diskreetse spektrumi jaoks saab formuleerida järgnevalt. Eeldatakse, et on teada diskreetse spektri omaväärtused (ingl  \textit{eigenvalues}) \(E_0^{(0)}\) ja omafunktsioonid (ingl \textit{eigenfunctions}) \(\phi^0\) häitimata operaatori \(H_0\) jaoks, st et on teada võrrandi
 %\begin{equation}
@@ -258,12 +267,12 @@ Korrutades võrrandi \eqref{terms1} mõlemad pooled $\bra{n^0}$-ga ning kasutade
 %\end{equation}
 %st ligikaudesd avaldised häiritud operaatori \(\op{H}\) omafunktsioonide \(\phi_n\) ja omaväärtuste \(E_n\) väärtused.\parencite{landau05}
 
-\chapter{Praktiline osa}
+\chapter{Soojusmahtuvus erinevate potentsiaalide korral}
 
-Kuna olümpiaadiülesandes oleva kera potentsiaal on väga keeriline, siis on vaja soojusmahtuvuse leidmiseks teha lihtsustusi.
-Järgnevalt vaadatakse süsteeme, millest võib mõelda kui kehadest, mis on vedruga kinnitatud pinna külge.
-Vedru siht ühtib gravitatsiooniväljaga.
-Süsteemi potentsiaal sõltub vedru jäikusest.
+%Kuna olümpiaadiülesandes oleva kera potentsiaal on väga keeriline, siis on vaja soojusmahtuvuse leidmiseks teha lihtsustusi.
+%Järgnevalt vaadatakse süsteeme, millest võib mõelda kui kehadest, mis on vedruga kinnitatud pinna külge.
+%Vedru siht ühtib gravitatsiooniväljaga.
+%Süsteemi potentsiaal sõltub vedru jäikusest.
 
 \section{Tükiti lineaarne potentsiaal}
 Vaadeldakse potentsiaali kujuga

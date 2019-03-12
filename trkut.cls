@@ -91,10 +91,12 @@
 
 % Left-align all captions. Always.
 \RequirePackage{caption}
-\captionsetup{justification=justified,singlelinecheck=false}
+\captionsetup{justification=justified, singlelinecheck=false, format=plain}
 
 % Joonis vahetult seda kirjeldava teksti juures ehk sama alapeatüki sees
 \RequirePackage[section]{placeins}
+
+\RequirePackage{xstring}
 
 % Captions to "Caption" style instead of "Source".
 \newcommand{\trkcaptionsetup}{\captionsetup{labelformat=simple, labelsep=period, labelfont=bf, font=bf}}
@@ -103,6 +105,17 @@
 \newcommand{\captionstosource}{\captionsetup{labelformat=simple, labelsep=period, font=normalfont}}
 % Add source to a figure or table.
 \newcommand{\allikas}[1]{\vspace{-1em}\captionstosource\caption*{Allikas: #1}\trkcaptionsetup}
+
+%% Esimene lause on boldis, järgmised mitte.
+%\newcommand\formatlabel[1]{%
+%    \noexpandarg
+%    \IfSubStr{#1}{.}{%
+%      \StrBefore{#1}{.}[\firstcaption]%
+%      \StrBehind{#1}{.}[\secondcaption]%
+%      \textbf{\firstcaption.} \secondcaption}{%
+%      #1}%
+%}
+%\patchcmd{\@caption}{#3}{\formatlabel{#3}}
 
 % Töö kõik tabelid tuleb nummerdada läbiva numeratsiooniga (ja kui juba tabelid, siis muu ka vist)
 \RequirePackage{chngcntr}

@@ -37,24 +37,30 @@ I rahvusvahelisel füüsikaolümpiaadil 1967. aastal oli järgnev ülesanne \par
 
 Selle ülesande algses lahenduses leiti, et enamiku materjalide jaoks on on horisontaalsel tasandil oleva kera soojusmahtuvus on suurem riputatud kera omast.
 St, et tasandil oleva kera temperatuur on pärast soojushulga andmist väiksem.
-Hiljuti leiti Palma ja Sormani poolt, et efekt on hoopis vastupidine ja algne lahendus rikub termodünaamika II seadust.
-Samasugune tulemus saadi kasutades statistilist mehaanikat ja klassikalist termodünaamikat.
-Mõlemad lahendused seovad omavahel soojusmahtuvuse ja lineaarse soojuspaisumisteguri.
+Hiljuti leiti Palma ja Sormani poolt, et algne lahendus rikub termodünaamika II seadust.
+Nad pakkusid välja kaks alternatiivset lahendust kasutades statistilist mehaanikat ja klassikalist termodünaamikat.
+Mõlema lahendusga saadi sama tulemus ja seoti omavahel kera soojusmahtuvuse ja lineaarse soojuspaisumisteguri.
 
-Käesolevas töös uuritakse konkreetsete potentsiaalide korral konstantse gravitatsioonvälja mõju kerale sarnasele, kuid lihtsustatud, süsteemi soojusmahtuvusele.
+Käesolevas töös uuritakse konkreetsete potentsiaalide korral konstantse gravitatsioonvälja mõju kerale sarnasele, kuid lihtsustatud süsteemi soojusmahtuvusele.
 Täpsemalt vaatatakse süsteemi, kus kõik osakesed peale ühe on fikseeritud ja see osake saab liikuda ainult ühes dimensioonis.
-Konstantse gravitatsioonivälja potentsiaal on lineaarne ja see selle saab liita süsteemi potentsiaalile.
+Konstantse gravitatsioonivälja potentsiaal on lineaarne ja selle saab liita süsteemi potentsiaalile.
 Käesolevas töös tahetakse leida seas süsteemi potentsiaali ja soojusmahtuvuse vahel.
 
 Töös analüüsitakse kuuphäiritusega harmoonilise ostsillaatori potentsiaali häirituse meetodil ja tükati sirgetest koosnevat potentsiaali kvaasi-klassikaliselt.
-
+Harmoonilise ostsillaatori potentsiaal on valitud, kuna selline potentsiaal on tüüpiliselt potentsiaalimiinimumide ümber.
+Laialt kasutatakse harmoonilise ostsillaatori potentsiaali ka kaheaatomilise molekuli lihtsa mudelina.
+Tükati sirgetest koosnev potentsiaal on valitud selle arvutusliku lihtususe tõttu.
 
 %Varem on uuritud gravitatsiooni mõju metallkera soojusmahtuvusele Palma ja Sormani poolt \parencite{palma15}.
 %Leiti üldine seos soojusmahtuvuse, temperatuuri, gravitatsioonivälja tugevuse ja lineaarse soojuspaisumisteguri vahel.
 %Saadud tulemust on eksperimentaalselt väga raske kinnitada, kuna gravitatsiooni mõju on väga väike.
 %Konkreetsete potentsiaalide läbivaatamine tõstaks ka varem leitud mudeli usaldusväärsust.
 
-Töö hüpoteesiks on, et sõltuvalt valitud potentsiaalist võib gravitatsioonväli nii tõsta kui ka langetada keha soojusmahtuvust.
+Uurimistöö hüpoteesiks on, et sõltuvalt valitud potentsiaalist võib gravitatsiooniväli nii tõsta kui ka langetada keha soojusmahtuvust.
+
+Uurimistöö on jaotatud kahte ossa.
+Esimeses osas tutvustatakse varasemaid tulemusi kera soojusmahtuvuse kohta ja potentsiaalide analüüsis kasutatavaid meetodeid.
+Teises osas kirjeldatakse töös kasutatavat mudelit ja analüüsitakse erinevaid potentsiaale.
 
 
 \addchap{Tähiste loetelu}
@@ -65,9 +71,9 @@ Töö hüpoteesiks on, et sõltuvalt valitud potentsiaalist võib gravitatsioonv
 %Samuti on välja toodud alternatiivse lahendusega saadud tulemus (vt võrrand \eqref{palmasor}).
 \section{Olümpiaadiülesande algne lahendus} \label{algne}
 
-Algne lahendus põhineb soojuspaisumisega seotud erinevustel. Kerale $A$ soojust andes see paisub ja selle massikese tõuseb. Järelikult peab osa kerale A antavast soojushulgast kuluma kera massikeskme gravitatsioonilise potentsiaalse energia tõstmiseks ja lõpptemperatuur on madalam algsest. Vastupidiselt, kera $B$ massikese langeb soojuspaisumise tõttu ja energiat saadakse juurde, järelikult on kera $B$ lõpptemperatuur kõrgem. \parencite[6-7]{ipho67}
+Algne lahendus põhineb soojuspaisumisega seotud erinevustel. Tasapinnal olevale kerale $A$ soojust andes see paisub ja selle massikese tõusej. Järelikult peab osa kerale A antavast soojushulgast kuluma kera massikeskme gravitatsioonilise potentsiaalse energia tõstmiseks, mis langetab kera temperatuuri. Vastupidiselt, rippuva kera $B$ massikese langeb soojuspaisumise tõttu ja energiat saadakse juurde, mis tõstab kera B temperatuuri. \parencite[6-7]{ipho67}
 
-Pannakse ka kirja tavapärasele lahendusele vastavad valemid. Olgu kerade soojusmahtuvus $C_0$ gravitatsioonivälja puudumisel. Tavapärase lahenduse korrale, kui kera A soojendatakse, siis selle massikese tõuseb $dR=\alpha R \, dT$ võrra, kus $dT$ on temperatuuri tõus, $\alpha$ on soojuspaisumistegur ja $R$ on kera raadius. Kera saab potentsiaalse energia $d\Phi = mg \, dR$, kus $m$ on keha mass ja $g$ on raskuskiirendus. Järelikult, kui soojushulk \(\delta Q\) antakse süsteemile, siis saadakse, et \parencite[2-3]{palma15}
+Olgu kerade soojusmahtuvus $C_0$ gravitatsioonivälja puudumisel. Algse lahenduse järgi, kui kera A soojendatakse, siis selle massikese tõuseb $dR=\alpha R \, dT$ võrra, kus $dT$ on temperatuuri tõus, $\alpha$ on soojuspaisumistegur ja $R$ on kera raadius. Kera saab juurde potentsiaalse energia $d\Phi = mg \, dR$, kus $m$ on keha mass ja $g$ on gravitatsioonivälja tugevus. Järelikult, kui soojushulk \(\delta Q\) antakse süsteemile, siis saadakse, et \parencite[2-3]{palma15}
 \begin{equation}
     \delta Q = C_0 \, dT + mg \, dR = C_0 \, dT + mg\alpha R \, dT = (C_0 +  mg\alpha R) dT.
 \end{equation}
@@ -75,19 +81,21 @@ See on ekvivalentne väitega, et kera \(A\) soojusmahtuvus
 \begin{equation}
     C_A = C_0 + mg\alpha R.
 \end{equation}
-Analgoselt saadakse, et kera \(B\) soojusmahtuvus
+Analoogselt saadakse, et kera \(B\) soojusmahtuvus
 \begin{equation}
     C_B = C_0 - mg\alpha R.
 \end{equation}
-Enamiku materjalide jaoks on \(\alpha > 0\), millest tulenevalt \(C_A>C_B\). Järelikult on tavapärase lahenduse kohaselt kera \(A\) lõpptemperatuur madalam kera \(B\) lõpptemperatuurist.
+Enamiku materjalide korral on \(\alpha > 0\), millest tulenevalt \(C_A>C_B\). Järelikult on tavapärase lahenduse kohaselt kera \(A\) lõpptemperatuur madalam kera \(B\) lõpptemperatuurist.
 
 \section{Algne lahendus rikub termodünaamika II seadust} \label{rikub}
 
-Tavapärases lahenduses kaudselt eeldatakse, et keha siseenergia \(U\) ja raadius \(R\) sõltuvad ainult temperatuurist \(T\), mitte aga raskuskiirendusest \(g\). Vaadeldakse järgnevat tsüklit: pall asub horisontaalsel külmal tasandil temperatuuriga \(T_1\); pall ühendatakse soojema reservuaariga, mille temperatuur \(T_2=T_1+dT>T_1\); pall riputatakse nööri külge ja horisontaalne tasand eemaldatakse; pall ühendatakse külma reservuaariga, mille temperatuur on \(T_1\). Selle protsessi kasutegur on tehtud töö ja neeldunud soojuse suhe ning avaldub kujul \parencite[3-5]{palma15}
+Algses lahenduses kaudselt eeldatakse, et keha siseenergia \(U\) ja raadius \(R\) sõltuvad ainult temperatuurist \(T\), mitte aga raskuskiirendusest \(g\).
+Vaadeldakse järgnevat tsüklit: pall asub horisontaalsel külmal tasandil temperatuuriga \(T_1\); pall ühendatakse soojema reservuaariga, mille temperatuur \(T_2=T_1+dT>T_1\); kera riputatakse nööri külge ja horisontaalne tasand eemaldatakse; kera ühendatakse külma reservuaariga, mille temperatuur on \(T_1\).
+Selle protsessi kasutegur on tehtud töö ja neeldunud soojushulga suhe ning avaldub kujul \parencite[3-5]{palma15}
 \begin{equation}
     \eta = \frac{2mg\alpha R}{C_0+mg\alpha R}.
 \end{equation}
-Kasutegur \(\eta\) ei sõltu \(dT\) suurusest. Termodünaamika teist seadust saab sõnastada järgnevalt: iga tsükkel, mis töötab ainult temperatuuride \(T_1\) ja \(T_2\) juures ei saa olla efektiivsem Carnot' tsüklist, mis töötab samade temperatuuride juures. Carnot' tsükli efektiivsus on \parencite[3-5]{palma15}
+Kasutegur \(\eta\) ei sõltu \(dT\) suurusest. Termodünaamika teist seadust saab sõnastada järgnevalt: iga tsükkel, mis töötab ainult temperatuuride \(T_1\) ja \(T_2\) vahemikus ei saa olla efektiivsem Carnot' tsüklist, mis töötab samade temperatuuride juures. Carnot' tsükli efektiivsus on \parencite[3-5]{palma15}
 \begin{equation}
     \eta_{Carnot'} = \frac{dT}{T_2}
 \end{equation}
@@ -111,7 +119,7 @@ Järelikult, kui \(dT\) on piisavalt väike, siis on palliga tsükli kasutegur s
 %    \op{H}=-\frac{\hbar^2}{2m}\frac{d^2}{dx^2}+V(x).
 %\end{equation}
 
-\section{Statistiline mehaanika}
+\section{Kvantmehaaniline statistiline mehaanika}
 
 Kvantmehaanilises statistilises mehaanikas on mugav kasutada tihedusmaatriksit (ingl \textit{density matrix}) $\op{\rho}$ kvantmehaanilise operaatori ooteväärtuse (ingl \textit{expectation value}) leidmiseks.
 Tihedusmaatriks on defineeritud järgnevalt \parencite[172]{kardar07}:
@@ -131,8 +139,8 @@ Kanoonilise ansambli\footnote{Ansambel, kus süsteem on soojuslikus tasakaalus f
     \op{\rho}(\beta) = \frac{e^{-\beta \op{H}}}{Z(\beta)},
     \label{tihm}
 \end{equation}
-kus $\beta \equiv 1/k_B T$, kus $T$ on temperatuur ja $k_B$ on Boltzmanni konstant,
-Kuna $\bra{\Psi_j}$ on normaliseeritud, siis
+kus $\beta \equiv \frac{1}{k_B T}$, kus $T$ on absoluutne temperatuur ja $k_B$ on Boltzmanni konstant.
+Kuna $\bra{\Psi_j}$ on normeeritud, siis
 \begin{equation}
     \braket{1}=\tr(\op{\rho})=\sum_n \braket{n|\op{\rho}|n}=\sum_{n, j} p_j |\braket{n| \Psi_j}|^2=\sum_j p_j=1.
     \label{tihnorm}
@@ -147,7 +155,7 @@ Kasutades võrrandeid \eqref{ootev}, \eqref{tihm} ja \eqref{part} saadakse hamil
     \overline{\braket{\op{H}}}=\tr(\op{\rho}\op{H})=\frac{\tr{\op{H}e^{-\beta \op{H}}}}{Z}= -\frac{\partial \ln Z}{\partial \beta}.
     \label{keskham}
 \end{equation}
-Hamiltoniaani keskmist ooteväärtust võib mõista kui süsteemi energiat. Kuna ollakse huvitatud temperatuuri muutusest kui süsteemile antakse mingi enerigiahulk, siis on kasulik defineerida soojusmahtuvus kui
+Hamiltoniaani keskmist ooteväärtust võib mõista kui süsteemi energiat. Kuna ollakse huvitatud temperatuuri muutusest, kui süsteemile antakse mingi energiahulk, siis on kasulik defineerida soojusmahtuvus kui $\overline{\braket{\op{H}}}$ osatuletis $T$ järgi:
 \begin{equation}
     C = \frac{\partial \overline{\braket{\op{H}}}}{\partial T}.
     \label{soojuham}
@@ -158,7 +166,7 @@ Kombineerides võrrandeid \eqref{keskham} ja \eqref{soojuham} saadakse, et
     \label{mahtuvus}
 \end{equation}
 
-Kasutades selles osas saadud seoseid on võimalik leida kera soojusmahtuvuse sõltuvus gravitatsioonist \parencite[10-13]{palma15}:
+Kasutades selles osas saadud seoseid on võimalik leida kera soojusmahtuvuse sõltuvus gravitatsioonivälja tugevusest \parencite[10-13]{palma15}:
 \begin{equation} \label{palmasor}
     \frac{\partial C(g,T)}{\partial g} = -mTY \left( \alpha^2 + \frac{\partial \alpha}{\partial T} \right),
 \end{equation}
@@ -167,28 +175,32 @@ kus \(C\) on soojusmahtuvus, \(g\) on gravitatsioonivälja tugevus, \(m\) on ker
 
 \section{Kvaasi-klassikaline lähendus}
 
+\Huge
+\textbf{Sissejuhatus teemale}
+\normalsize
+
 Ajast sõltumatu Schrödingeri võrrandi ühes dimensioonis
 \begin{equation}
-    -\frac{\hbar^2}{2m}\frac{d^2\psi}{dx^2}+V(x)\psi=E\psi
+    -\frac{\hbar^2}{2m}\frac{d^2\psi(x)}{dx^2}+V(x)\psi=E\psi
 \end{equation}
 saab ümber kirjutada järgnevalt:
 \begin{equation}
-    \frac{d^2 \psi}{dx^2}= - \frac{p^2}{\hbar^2}\psi,
+    \frac{d^2 \psi(x)}{dx^2}= - \frac{p(x)^2}{\hbar^2}\psi,
 \end{equation}
 kus
-\begin{equation}
-    p(x) \equiv \sqrt{2m[E-V(x)]}
+\begin{equation} \label{klassikalineimp}
+    p(x) = \sqrt{2m[E-V(x)]}.
 \end{equation}
-on klassikaline valem osakese impulsi jaoks koguenergiaga $E$ ja potentsiaalse energiaga $V(x)$.
-Piirkonnas, kus $E>V(x)$, on $p(x)$ reaalne.
-Seda piirkonda kutsutakse \enquote{klassikaliseks}, kuna klasskikaliselt on osake piiratud selles piirkonnas.
+Valem \eqref{klassikalineimp} on klassikaline valem osakese impulsi arvutamiseks, mille koguenergia on $E$ ja potentsiaalse energia on $V(x)$.
+Piirkonnas, kus $E>V(x)$, on $p(x)$ reaalarvuline.
+Seda piirkonda kutsutakse \enquote{klassikaliseks}, kuna klassikaliselt on osake sulustatud selles piirkonnas.
 Üldiselt on $\psi$ kompleksfunktsioon, mida saab avaldada klassikalises piirkonnas amplituudi $A(x)$ ja faasi $\phi(x)$ kaudu, mis mõlemad on reaalsed \parencite[316]{griffiths05}:
 \begin{equation}
     \psi(x)=A(x)e^{i\phi(x)}.
 \end{equation}
-\marginpar{Kas oleks vaja tuletuskäiku?}Eeldades, et amplituud $A$ muutub aeglaselt\footnote{Täpsemalt eeldatakse, et $A''/A\ll(\phi ')^2$ ja $A''/A\ll p^2/\hbar^2$.}, avaldub lainefunktsioon klassikalises piirkonnas kujul \parencite[316-318]{griffiths05}
+Eeldades, et amplituud $A$ muutub aeglaselt\footnote{Täpsemalt eeldatakse, et $A''/A\ll(\phi ')^2$ ja $A''/A\ll p^2/\hbar^2$.}, avaldub lainefunktsioon klassikalises piirkonnas kujul \parencite[316-318]{griffiths05}
 \begin{equation}
-    \psi = \frac{C_1}{\sqrt{p(x)}}\exp\left(\frac{i}{\hbar}\int p(x)\, dx\right) +\frac{C_2}{\sqrt{p(x)}}\exp\left(-\frac{i}{\hbar}\int p(x)\, dx\right),
+    \psi(x) = \frac{C_1}{\sqrt{p(x)}}\exp\left(\frac{i}{\hbar}\int p(x)\, dx\right) +\frac{C_2}{\sqrt{p(x)}}\exp\left(-\frac{i}{\hbar}\int p(x)\, dx\right),
     \label{eq:kvaasik1}
 \end{equation}
 kus $C_1$ ja $C_2$ on kompleksarvulised konstandid.
@@ -197,9 +209,9 @@ Valemi \eqref{eq:kvaasik1} saab ka kirja panna kujul \parencite[446]{shankar94}
     \psi(x)=\frac{A}{\sqrt{p(x)}} \cos \left[ \frac{1}{\hbar}\int p(x)\, dx + B \right],
     \label{eq:kvaasik2}
 \end{equation}
-kus $A$ ja $B$ on reaalsed parameetrid.
-Kahjuks ei kehti \eqref{eq:kvaasik2} kui $E \approx V(x)$, kuna $\sqrt{p(x)} \to 0$. Olgu $V(x_1)=V(x_2)=E$, $x_1<x_2$ ja lõigul $(x_1, x_2)$ on $V(x)<E$.
-\marginpar{Kas oleks vaja tuletuskäiku?}On siiski võimalik vaadeldes lainefunktsiooni $x_1$ lähedal näidata, et lõigul $(x_1, x_2)$ on lainefunktsioon järgmine \parencite[167-170]{landau05}:
+kus $A$ ja $B$ on reaalarvulised parameetrid.
+Kahjuks ei kehti \eqref{eq:kvaasik2}, kui $E \approx V(x)$, kuna $\sqrt{p(x)} \to 0$. Olgu $V(x_1)=V(x_2)=E$, $x_1<x_2$ ja vahemikul $(x_1, x_2)$ on $V(x)<E$.
+On siiski võimalik vaadeldes lainefunktsiooni $x_1$ lähedal näidata, et vahemikul $(x_1, x_2)$ on lainefunktsioon \parencite[167-170]{landau05}:
 \begin{equation}
     \psi(x)=\frac{A}{\sqrt{p(x)}} \cos \left[ \frac{1}{\hbar}\int_{x_1}^{x} p(x)\, dx - \frac{\pi}{4} \right],
 \end{equation}
@@ -207,9 +219,9 @@ kui $x_2$ lähedal on lainefunktsioon
 \begin{equation}
     \psi(x)=\frac{A'}{\sqrt{p(x)}} \cos \left[ \frac{1}{\hbar}\int_{x_2}^{x} p(x)\, dx + \frac{\pi}{4} \right].
 \end{equation}
-Selleks, et need kaks lahendit ühtiksid, peavad $A$ ja $A'$ olema sama magnituudiga ja koosinuste faaside vahe peab olema $\pi$ kordne \parencite[446]{shankar94}:
+Selleks, et need kaks lahendit ühtiksid, peavad $A$ ja $A'$ olema sama mooduliga ja koosinuste faaside vahe peab olema $\pi$ kordne \parencite[446]{shankar94}:
 \begin{equation}
-    \frac{1}{\hbar}\int_{x_1}^{x} p(x)\, dx - \frac{1}{\hbar}\int_{x_2}^{x} p(x)\, dx - \frac{\pi}{2} = n\pi
+    \frac{1}{\hbar}\int_{x_1}^{x} p(x)\, dx - \frac{1}{\hbar}\int_{x_2}^{x} p(x)\, dx - \frac{\pi}{2} = n\pi, \qquad n=0, 1, 2, \dots
 \end{equation}
 või
 \begin{equation}
@@ -223,9 +235,9 @@ või
 Schrödingeri võrrandit täpselt lahendada on võimalik ainult lihtsamatel juhtudel, keerulisemate juhtude jaoks on vaja teha lähendusi.
 Ajast sõltumatu häiritusteooria (edaspidi häiritusteooria) on lähendusmeetod, mida saab rakendada järgnevas olukorras: teades lahendit hamiltoniaani $\op[0]{H}$ omaväärtusülesandele (ingl \textit{eigenvalue problem}), tahetakse leida lahendit $\op{H}=\op[0]{H}+\op[1]{H}$, kus $\op[1]{H}$ on suhteliselt väike võrreldes $\op[0]{H}$-ga.
 Eeldatakse, et iga $\op[0]{H}$ kidumata omaketi (ingl \textit{eigenket}) $\Ket{n^0}$ omaväärtusega $E_n^0$ jaoks leidub $\op{H}$ kidumata omaket $\Ket{n}$ omaväärtusega $E_n$.
-Siis eeldades, et $H$ omaketid ja omaväärtused võib kirja panna häiritusseerias \parencite[451]{shankar94}:
+Siis eeldades, et $\op{H}$ omaketid ja omaväärtused võib kirja panna häiritusseerias \parencite[451]{shankar94}:
 \begin{align}
-    \Ket{n}&=\Ket{n^0}+\Ket{n^1}+\Ket{n^2}+... \\
+    \Ket{n}&=\ket{n^0}+\ket{n^1}+\ket{n^2}+... \\
     E_n&=E_n^0+E_n^1+E_n^2+...
 \end{align}
 Iga liikme ülaindeks $k$ näitab millise $\op[1]{H}$ astmega eeldatakse, et iga liige on võrdeline.
@@ -238,11 +250,11 @@ või
     (\op[0]{H} + \op[1]{H})(\ket{n^0}+\ket{n^1}+...)=(E_n^0+E_n^1+...) (\ket{n^0}+\ket{n^1}+...).
     \label{terms}
 \end{equation}
-Vaadates võrrandis \eqref{terms} nullindat järku liikmeid saadakse võrrand
+Vaadates võrrandis \eqref{terms} nullindat järku liikmeid, saadakse võrrand
 \begin{equation}
     \op[0]{H}\ket{n^0}=E_n^0\ket{n^0}.
 \end{equation}
-Eelduse järgi on see võrrand lahendatud ja omaket $\Ket{n^0}$ ja omaväärtused $E_n^0$ on teada. Vaadates võrrandis \eqref{terms} esimest järku liikmeid saadakse võrrand
+Eelduse järgi on see võrrand lahendatud ja omaket $\Ket{n^0}$ ja omaväärtused $E_n^0$ on teada. Vaadates võrrandis \eqref{terms} esimest järku liikmeid, saadakse võrrand
 \begin{equation}
     \op[0]{H}\ket{n^1} + \op[1]{H}\ket{n^0} = E_n^0\ket{n^1} + E_n^1\ket{n^0}.
     \label{terms1}
@@ -315,11 +327,12 @@ $E_n$ avaldades saadakse, et
 \begin{equation}
     E_n =\left[\frac{3\pi}{2\sqrt{2}} \frac{\hbar}{\sqrt{m}} \frac{(-a+mg)(b+mg)}{a+b}\right]^{\frac{2}{3}} \left(n+\frac{1}{2}\right)^{\frac{2}{3}} . \label{tukene}
 \end{equation}
-Asendades võrrandisse \eqref{tukene} $c=\left[\frac{3\pi}{2\sqrt{2}} \frac{\hbar}{\sqrt{m}} \frac{(-a+mg)(b+mg)}{a+b}\right]^{\frac{2}{3}}$ avaldub statistiline summa järgnevalt:
+Kombineerides võrrandid \eqref{part} ja \eqref{tukene}, avaldub statistiline summa järgnevalt:
 \begin{equation}
-    Z=\sum_{n=0}^{\infty} \exp \left( -\beta c \left(n+\frac{1}{2}\right)^\frac{2}{3} \right).
+    Z=\sum_{n=0}^{\infty} \exp \left( -\beta c \left(n+\frac{1}{2}\right)^\frac{2}{3} \right),
     \label{linsum}
 \end{equation}
+kus $c=\left[\frac{3\pi}{2\sqrt{2}} \frac{\hbar}{\sqrt{m}} \frac{(-a+mg)(b+mg)}{a+b}\right]^{\frac{2}{3}}$.
 Kui $\beta c\ll 1$, siis saab summa asendada integraaliga ja $n+\frac{1}{2}\approx n$:
 \begin{equation}
     Z \approx \int_0^\infty e^{-\beta c n^\frac{2}{3}} \, dn = \left.\left[ \frac{3\sqrt{\pi}  \erf{\left( {n}^\frac{1}{3} \sqrt{\beta c}\right)} }{4 (\beta c)^\frac{3}{2}}-\frac{3n^\frac{1}{3} e^{-\beta cn^\frac{2}{3}}}{2 \beta c }\right]\right|^{\infty}_{0} =\frac{3\sqrt{\pi}}{4(\beta c)^\frac{3}{2}} .
@@ -338,7 +351,7 @@ See tähendab, et kõrgetel temperatuuridel ei sõltu süsteemi soojusmahtuvus t
     ={}&kT^2\frac{\partial}{\partial \beta} \frac{\sum_{n=0}^{\infty} -c\left(n+\frac{1}{2}\right)^\frac{2}{3} \exp \left( -\beta c \left(n+\frac{1}{2}\right)^\frac{2}{3} \right)}{\sum_{n=0}^{\infty} \exp \left( -\beta c \left(n+\frac{1}{2}\right)^\frac{2}{3} \right)} \nonumber \\
     \begin{split}\label{mahsum}
         ={}&kT^2 \frac{c^2 \sum_{n=0}^\infty \left( n+\frac{1}{2}\right)^\frac{4}{3} \exp \left( -c \left( n+\frac{1}{2} \right)^\frac{2}{3} \beta \right) }{\sum_{n=0}^\infty {{\exp}\left( -c {{\left( n+\frac{1}{2}\right) }^{\frac{2}{3}}} \beta \right)}}  \\
-        & - \frac{c^2 \left( \sum_{n=0}^{\infty }{{{\left( n+\frac{1}{2}\right) }^{\frac{2}{3}}} {{ \exp}\left( -c {{\left( n+\frac{1}{2}\right) }^{\frac{2}{3}}} \beta \right)}}\right)^{2}}{{{\left( \sum_{n=0}^{\infty }{ {{\exp}\left( -c {{\left( n+\frac{1}{2}\right) }^{\frac{2}{3}}} \beta \right)}}\right) }^{2}}}
+        & - \frac{c^2 \left( \sum_{n=0}^{\infty }{{{\left( n+\frac{1}{2}\right) }^{\frac{2}{3}}} {{ \exp}\left( -c {{\left( n+\frac{1}{2}\right) }^{\frac{2}{3}}} \beta \right)}}\right)^{2}}{{{\left( \sum_{n=0}^{\infty }{ {{\exp}\left( -c {{\left( n+\frac{1}{2}\right) }^{\frac{2}{3}}} \beta \right)}}\right) }^{2}}}.
     \end{split}
 \end{align}
 Kui $\beta c \gtrsim 1$, siis avaldise \eqref{mahsum} väärtus on võimalik küllaltki heas lähenduses leida vaadates ainult summade esimesi liikmeid.\footnote{$\beta c =1$ jaoks piisab küllaltki hea täpsuse jaoks mõnesajast liikmest.}
@@ -349,12 +362,12 @@ Joonistel on kõik väärtused SI ühikutes ja $N$ tähistab summeeritud liikmet
 Jooniselt \ref{joon1} on näha, et madalatel temperatuuridel on soojusmahtuvus väike.
 \marginpar{Kas (osa) jooniseid peaks olema lisades?}
 Gravitatsioonivälja muutus võib nii tõsta kui ka langetada soojusmahtuvust.
-Kuna potentsiaal \eqref{linpot} on mingi kindla $g$ väärtuse jaoks sümmeetriline nullpunkti suhtes, siis nii välja suurendamine kui ka vähendamine mõjutavad soojusmahtuvust samamoodi.
+Kuna potentsiaal \eqref{linpot} on mingi kindla $g$ väärtuse jaoks sümmeetriline nullpunkti suhtes, siis nii gravitatsioonivälja tugevuse suurendamine kui ka vähendamine mõjutavad soojusmahtuvust samamoodi.
 Jooniselt \ref{joon1} on näha, et soojusmahtuvus on minimaalne teatud temperatuuril, kui potentsiaal \eqref{linpot} on sümmeetriline nullpunkti suhtes, ja kasvab, kui muuta gravitatsioonivälja.
 
 \begin{figure}[htb!]
     \includegraphics[width=\textwidth]{maxima/m1a1b1T0_1S400_2.pdf}
-    \caption{Soojusmahtuvuse sõltuvus gravitatsiooniväljast ja temperatuurist tükiti lineaarse potentsiaal korral, kus $a=\SI{1}{N}$, $b=\SI{1}{N}$, $m=\SI{1}{kg}$ ja $N=400$.}
+    \caption{Soojusmahtuvuse sõltuvus gravitatsioonivälja tugevusest ja temperatuurist tükiti lineaarse potentsiaali korral, kus $a=\SI{1}{N}$, $b=\SI{1}{N}$, $m=\SI{1}{kg}$ ja $N=400$.}
     \allikas{Autori erakogu.}
     \label{joon1}
 \end{figure}
@@ -374,7 +387,7 @@ ehk
 
 \begin{figure}[htb!]
     \includegraphics[width=\textwidth]{maxima/m1a1b2T0_1S400.pdf}
-    \caption{Soojusmahtuvuse sõltuvus gravitatsiooniväljast ja temperatuurist tükiti lineaarse potentsiaal korral, kus $a=\SI{1}{N}$, $b=\SI{2}{N}$, $m=\SI{1}{kg}$ ja $N=400$.}
+    \caption{Soojusmahtuvuse sõltuvus gravitatsioonivälja tugevusest ja temperatuurist tükiti lineaarse potentsiaali korral, kus $a=\SI{1}{N}$, $b=\SI{2}{N}$, $m=\SI{1}{kg}$ ja $N=400$.}
     \allikas{Autori erakogu.}
     \label{joon5}
 \end{figure}
@@ -386,14 +399,14 @@ Seda väidet kinnitab ka täpsemal joonisel (joonis \ref{joon4}) väiksem soojus
 
 \begin{figure}[htb!]
     \includegraphics[width=0.66\textwidth]{maxima/m1a1b1T0_10S100.pdf}
-    \caption{Soojusmahtuvuse sõltuvus gravitatsiooniväljast ja temperatuurist tükiti lineaarse potentsiaal korral, kus $a=\SI{1}{N}$, $b=\SI{1}{N}$, $m=\SI{1}{kg}$ ja $N=100$.}
+    \caption{Soojusmahtuvuse sõltuvus gravitatsioonivälja tugevusest ja temperatuurist tükiti lineaarse potentsiaali korral, kus $a=\SI{1}{N}$, $b=\SI{1}{N}$, $m=\SI{1}{kg}$ ja $N=100$.}
     \allikas{Autori erakogu.}
     \label{joon3}
 \end{figure}
 
 \begin{figure}[htb!]
     \includegraphics[width=0.66\textwidth]{maxima/m1a1b1T0_10S400.pdf}
-    \caption{Soojusmahtuvuse sõltuvus gravitatsiooniväljast ja temperatuurist tükiti lineaarse potentsiaal korral, kus $a=\SI{1}{N}$, $b=\SI{1}{N}$, $m=\SI{1}{kg}$ ja $N=400$.}
+    \caption{Soojusmahtuvuse sõltuvus gravitatsioonivälja tugevusest ja temperatuurist tükiti lineaarse potentsiaali korral, kus $a=\SI{1}{N}$, $b=\SI{1}{N}$, $m=\SI{1}{kg}$ ja $N=400$.}
     \allikas{Autori erakogu.}
     \label{joon4}
 \end{figure}
@@ -415,14 +428,14 @@ Seda väidet kinnitab ka täpsemal joonisel (joonis \ref{joon4}) väiksem soojus
 
 \section{Häiritusega harmooniline ostsillaator}
 
-Siin osas vaadeltakse harmoonilist ostsillaatorit, millele on lisatud kuuphäiritus, gravitatsiooniväljas.
+Käesolevas osas vaadeltakse harmoonilist ostsillaatorit, millele on lisatud kuuphäiritus, gravitatsiooniväljas.
 
 \subsection{Harmooniline ostsillaator gravitatsiooniväljas}
 
-Selleks, et leida häirituse mõju süsteemile lahendatakse kõigepealt omaväärtusprobleem harmoonilise ostsillatori jaoks gravitatsiooniväljas.
+Selleks, et leida häirituse mõju süsteemile lahendatakse kõigepealt omaväärtusprobleem harmoonilise ostsillaatori jaoks gravitatsiooniväljas.
 Järgnev on sarnane tuletuskäiguga tavalise harmoonilise ostsillaatori jaoks, kuid erineb detailide poolest ja seega on siiski siin ära toodud.
 Tavalise harmoonilise ostsillaatori jaoks võib leida tuletuskäigu Shankari materjalist \parencite[202-216]{shankar94}.
-Gravitatsiooniväljas oleva ostsillaatorile vastav hamiltoonian on
+Gravitatsiooniväljas paiknevale ostsillaatorile vastav hamiltoonian on
 \begin{equation}
     \op[0]{H}=\frac{\op{p}^2}{2m}+\frac{m\omega^2 \op{x}^2}{2} + mg\op{x}=\hbar \omega (A^\dagger A + 1/2)-k_1,
 \end{equation}
@@ -443,13 +456,13 @@ Tahetakse leida omaväärtused järgmisele võrrandile:
 \begin{equation}
     \mathcal{H}\ket{\varepsilon}=\varepsilon \ket{\varepsilon}.
 \end{equation}
-Kehtivad järgnevad kasulikud omadused:
+Kehtivad järgnevad omadused:
 \begin{align}
-    \left[A, A^\dagger\right] &= 1, \\
-    \left[A, \mathcal{H}\right] &=A, \\
-    \left[A^\dagger, \mathcal{H}\right] &= -A^\dagger.
+%    \left[A, A^\dagger\right] &= 1, \\
+    \left[A, \mathcal{H}\right] &=A\mathcal{H} - \mathcal{H}A=A, \\
+    \left[A^\dagger, \mathcal{H}\right] &= A^\dagger \mathcal{H} - \mathcal{H} A^\dagger = -A^\dagger.
 \end{align}
-Operaatorid $A$ ja $A^\dagger$ on kasulikud kuna need genereerivad uusi omaseisundeid. Kuna
+Operaatorid $A$ ja $A^\dagger$ on tekitavad uusi omaseisundeid. Kuna
 \begin{align}
         \mathcal{H}A\ket{\varepsilon}&=\left(A\mathcal{H}-[A, \mathcal{H}]\right)\ket{\varepsilon} \nonumber\\
         &=(A\mathcal{H}-A)\ket{\varepsilon} \nonumber\\
@@ -460,7 +473,7 @@ siis peab oleama $A\ket{\varepsilon}$ omaseisundeid omaväärtusega $\varepsilon
     A\ket{\varepsilon}=C_\varepsilon \ket{\varepsilon -1},
     \label{cepsilon}
 \end{equation}
-kus $C_\varepsilon$ on konstant ja $\ket{\varepsilon -1}$ ja $\ket{\varepsilon}$ on normaliseeritud omaketid.
+kus $C_\varepsilon$ on konstant ja $\ket{\varepsilon -1}$ ja $\ket{\varepsilon}$ on normeeritud omaketid.
 Sarnaselt nähakse, et
 \begin{align}
         \mathcal{H}A^\dagger\ket{\varepsilon}&=\left(A^\dagger\mathcal{H}-[A^\dagger, \mathcal{H}]\right)\ket{\varepsilon} \nonumber \\
@@ -494,7 +507,7 @@ või
 \begin{equation}
     \varepsilon_0=\frac{1}{2} - \frac{k_1}{\hbar \omega}.
 \end{equation}
-Kasutades operaatorit $A^\dagger$ korduvalt saab suurendada seisundit $\ket{\varepsilon_0}$ lõputult. Seega avalduvad ostsillatori energiatasemed järgnevalt:\footnote{Kuna ühes dimensioonis pole kidumist, siis on ainsad energiatasemed \parencite[176-177]{shankar94}.}
+Kasutades operaatorit $A^\dagger$ korduvalt saab suurendada seisundit $\ket{\varepsilon_0}$ lõputult. Seega avalduvad ostsillatori energiatasemed järgnevalt:\footnote{Kuna ühes dimensioonis pole kidumist, siis need on ainsad energiatasemed \parencite[176-177]{shankar94}.}
 \begin{equation}
     \varepsilon_n=\left(n+\frac{1}{2}\right)-\frac{k_1}{\hbar \omega}, \qquad n=0, 1, 2,\dots
 \end{equation}
@@ -503,7 +516,9 @@ või
     E_n=\hbar \omega \left(n+\frac{1}{2}\right)-k_1, \qquad n=0, 1, 2,\dots
     \label{nullenergia}
 \end{equation}
-Nüüd tahetakse leida võrranditest \eqref{cepsilon} ja \eqref{cepsilon1} konstandid $C_\varepsilon$ ja $C_{\varepsilon+1}$. Kuna $\varepsilon=n+1/2 - k_1/\hbar \omega$, tähistame kette täisarvuga $n$. Tahetakse leida konstant $C_n$ järgmisest võrrandist:
+%Nüüd tahetakse leida võrranditest \eqref{cepsilon} ja \eqref{cepsilon1} konstandid $C_\varepsilon$ ja $C_{\varepsilon+1}$.
+Kuna $\varepsilon=n+1/2 - k_1/\hbar \omega$, tähistatakse kette täisarvuga $n$.
+Tahetakse leida konstant $C_n$ järgmisest võrrandist:
 \begin{equation}
     A\ket{n}=C_n \ket{n -1}.
     \label{konstket}
@@ -584,14 +599,14 @@ Kuna soojusmahtuvus muutub lubatud $g$ muutumispiirkonnas väga vähe, siis on j
 
 \begin{figure}[htb!]
     \includegraphics[width=\textwidth]{maxima/harh1k1m1w1l0001.pdf}
-    \caption{Soojusmahtuvuse sõltuvus gravitatsiooniväljast ja temperatuurist häiritusega harmoonilise ostsillaatori jaoks gravitatsiooniväljas, kus $\hbar=1$, $k_B=1$, $m=1$, $\omega=1$ ja $\lambda=\num{1e-3}$.}
+    \caption{Soojusmahtuvuse sõltuvus gravitatsioonivälja tugevusest ja temperatuurist häiritusega harmoonilise ostsillaatori jaoks gravitatsiooniväljas, kus $\hbar=1$, $k_B=1$, $m=1$, $\omega=1$ ja $\lambda=\num{1e-3}$.}
     \allikas{Autori erakogu.}
     \label{hjoon1}
 \end{figure}
 
 \begin{figure}[htb!]
     \includegraphics[width=\textwidth]{maxima/dcdgharh1k1m1w1l0001.pdf}
-    \caption{Soojusmahtuvuse tuletise gravitatsioonivälja suhtes sõltuvus gravitatsiooniväljast ja temperatuurist häiritusega harmoonilise ostsillaatori jaoks gravitatsiooniväljas, kus $\hbar=1$, $k_B=1$, $m=1$, $\omega=1$ ja $\lambda=\num{1e-3}$.}
+    \caption{Soojusmahtuvuse tuletise gravitatsioonivälja suhtes sõltuvus gravitatsioonivälja tugevusest ja temperatuurist häiritusega harmoonilise ostsillaatori jaoks gravitatsiooniväljas, kus $\hbar=1$, $k_B=1$, $m=1$, $\omega=1$ ja $\lambda=\num{1e-3}$.}
     \allikas{Autori erakogu.}
     \label{hjoon2}
 \end{figure}
@@ -640,6 +655,6 @@ Edaspidi tasuks uurida sama teemat, aga teistsuguste potentsiaalide jaoks. Kõig
 
 \addchap{Abstract}
 \addchap{Resümee}
-\kinnitusleht
+%\kinnitusleht
 
 \end{document}

@@ -295,7 +295,7 @@ tocindent=10em]{subparagraph}
 
 		\@paber
 	\end{center}
-	\vspace{2cm}
+	\vspace{1.5cm}
 	\begin{flushright}
 	\@author \\
 	\@klass \\

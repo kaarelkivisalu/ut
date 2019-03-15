@@ -5,7 +5,7 @@
 \addbibresource{viited_kaarel_kivisalu.bib}% Viidete info fail
 \defbibheading{bibliography}{\addchap{#1}}% Lisame kasutatud materjalid sisukorda
 
-\pealkiri{Gravitatsiooni mõju osakeste süsteemi soojusmahtuvusele erinevates potentsiaalides}
+\pealkiri{Gravitatsiooni mõju erinevate kvantmehaaniliste süsteemide soojusmahtuvusele}
 \autor{Kaarel Kivisalu}
 \klass{11. a}
 \juhendaja{prof Jaan Kalda \\ õp Toomas Reimann}
@@ -74,7 +74,7 @@ Mõlema lahendusga saadi sama tulemus ja seoti omavahel kera soojusmahtuvuse ja 
 Käesolevas töös uuritakse konkreetsete potentsiaalide korral konstantse gravitatsioonvälja mõju kerale sarnasele, kuid lihtsustatud süsteemi soojusmahtuvusele.
 Täpsemalt vaatatakse süsteemi, kus kõik osakesed peale ühe on fikseeritud ja see osake saab liikuda ainult ühes dimensioonis.
 Konstantse gravitatsioonivälja potentsiaal on lineaarne ja selle saab liita süsteemi potentsiaalile.
-Käesolevas töös tahetakse leida seas süsteemi potentsiaali ja soojusmahtuvuse vahel.
+Käesolevas töös tahetakse leida seas süsteemi potentsiaali ja soojusmahtuvuse vahel ning võrrelda omavahel lihtsustatud süsteemi ja kera soojusmahtuvusi.
 
 Töös analüüsitakse kuuphäiritusega harmoonilise ostsillaatori potentsiaali häirituse meetodil ja tükati sirgetest koosnevat potentsiaali kvaasi-klassikaliselt.
 Harmoonilise ostsillaatori potentsiaal on valitud, kuna selline potentsiaal on tüüpiliselt potentsiaalimiinimumide ümber.
@@ -316,9 +316,7 @@ Kuna olümpiaadiülesandes oleva kera potentsiaal on väga keeruline, siis on va
 Kera vaatamise asemel vaadatakse süsteemi, kus mingid osakesed on fikseeritud ja on üks ühes dimensioonis vabalt liikuv osake.
 Osakestevahelise vastastikmõju tõttu sõltub süsteemi energia vabalt liikuva osakese asukohast.
 Sellist vastastikmõju saab kirjeldada Schrödingeri võrrandiga, kus potentsiaal sõltub osakeste paigutusest.
-Selline mudel vastab näiteks kaheaatomilisele molekulile.
-Madalatel energiatel on selle potentsiaal ligikaudu sama harmoonilise ostsillaatori potentsiaaliga.
-Kuupparandi lisamine teeb potentsiaali veelgi täpsemaks.
+Sellisele mudel vastab näiteks kaheaatomilisele molekulile.
 
 Järgnevalt vaadatakse süsteeme, kus osake liigub gravitatsiooniväljaga samas dimensioonis.
 Gravitatsiooniväli muudab lineaarselt ühe osakese energiat ja seega lisandub süsteemi potentsiaalile lineaarne potentsiaal.
@@ -455,7 +453,10 @@ Seda väidet kinnitab ka täpsemal joonisel (joonis \ref{joon4}) väiksem soojus
 
 \section{Häiritusega harmooniline ostsillaator}
 
-Käesolevas osas vaadeltakse harmoonilist ostsillaatorit, millele on lisatud kuuphäiritus, gravitatsiooniväljas.
+Käesolevas osas vaadeldakse harmoonilist ostsillaatorit, millele on lisatud kuuphäiritus, gravitatsiooniväljas.
+Harmoonilise ostsillaatori potentsiaal on enimlevinud potentsiaale kvantmehaanikas.
+Selle kasulikkus seisneb selles, et tüüpiliselt on potentsiaalimiinimumide ümber just selline potentsiaal.
+Samuti on see üks vähestest kvantmehaanilistest süsteemidest, mille jaoks on teada analüütiline lahend.
 
 \subsection{Harmooniline ostsillaator gravitatsiooniväljas}
 
@@ -625,14 +626,14 @@ Kuna soojusmahtuvus muutub lubatud $g$ muutumispiirkonnas väga vähe, siis on j
 
 
 \begin{figure}[htb!]
-    \includegraphics[width=0.6\textwidth]{maxima/harh1k1m1w1l0001.pdf}
+    \includegraphics[width=\textwidth]{maxima/harh1k1m1w1l0001.pdf}
     \caption{Soojusmahtuvuse sõltuvus gravitatsioonivälja tugevusest ja temperatuurist häiritusega harmoonilise ostsillaatori jaoks gravitatsiooniväljas, kus $\hbar=\SI{1}{J.s}$, $k_B=\SI{1}{J.K^{-1}}$, $m=\SI{1}{kg}$, $\omega=\SI{1}{s^{-1}}$ ja $\lambda=\SI{1e-3}{J.m^{-3}}$.}
     \allikas{Autori erakogu.}
     \label{hjoon1}
 \end{figure}
 
 \begin{figure}[htb!]
-    \includegraphics[width=0.6\textwidth]{maxima/dcdgharh1k1m1w1l0001.pdf}
+    \includegraphics[width=\textwidth]{maxima/dcdgharh1k1m1w1l0001.pdf}
     \caption{Soojusmahtuvuse tuletise gravitatsioonivälja suhtes sõltuvus gravitatsioonivälja tugevusest ja temperatuurist häiritusega harmoonilise ostsillaatori jaoks gravitatsiooniväljas, kus $\hbar=\SI{1}{J.s}$, $k_B=\SI{1}{J.K^{-1}}$, $m=\SI{1}{kg}$, $\omega=\SI{1}{s^{-1}}$ ja $\lambda=\SI{1e-3}{J.m^{-3}}$.} %$\hbar=1$, $k_B=1$, $m=1$, $\omega=1$ ja $\lambda=\num{1e-3}$.}
     \allikas{Autori erakogu.}
     \label{hjoon2}
@@ -654,7 +655,7 @@ Häiritusega harmoonilise ostsillaatori jaoks saadud tulemus (vt joonis \ref{hjo
 Lihtsaid potentsiaale\footnote{Lihtsus siinkohal tähendab, et osakest selles potentsiaalis suudetakse vähemalt simuleerida.}, mille jaoks sõltub soojusmahtuvus gravitatsiooniväljast on siiski küllaltki vähe.
 
 Töös leitud tulemuste ja varasemate kera jaoks leitud tulemuste vahel esines sarnasusi.
-Kera soojusmahtuvus enamasti väheneb gravitatsioonivälja tugevuse suurenemisel.
+Kera soojusmahtuvus enamasti väheneb gravitatsioonivälja tugevuse suurenemisel (vt võrrand \eqref{palmasor}).
 Tükati lineaarse potentsiaali puhul esines nii soojusmahtuvuse suurenemist kui ka vähenemist, häiritusega harmoonilise ostsillaatori tulemused pigem viitasid soojusmahtuvuse vähenemisele, kuid polnud lõplikud.
 Selline tulemus on mõnevõrra üllatav, kuna vaadeldi ainult kahte potentsiaali süsteemide jaoks, mis on kerast oluliselt lihtsamad.
 
@@ -665,7 +666,7 @@ Kvaasi-klassikaliselt tükati lineaarse potentsiaali jaoks leitud tulemus on kü
 Summeerimisel kasutatud liikmete arv tundub piisav erinevate liikmete arvudega graafikute võrdluse põhjal.
 Samuti ühtivad summeerimise tulemused valitud parameetrite korral üllatavalt hästi integraalilise tulemusega juba suhteliselt madalate temperatuuride juures.
 Saadud soojusmahtuvuse väärtused on ka sobivas suurusjärgus osakesete süsteemi soojusmahtuvuse jaoks.
-Kuna tegu on siiski lähendusega võiks tulemusi kontrollida Schrödingeri võrrandi numblilise lahendamisega.
+Kuna tegu on siiski lähendusega võiks tulemusi kontrollida Schrödingeri võrrandi numbrilise lahendamisega.
 Autori arvuti võimsuse tõttu ei suudetud näidata võimalikku soojusmahtuvuse sõltuvust gravitatsiooniväljast juba umbes \SI{10}{K} juures, kuigi seal esineb tõenäoliselt sarnaselt madalamate tulemustega väike efekt.
 
 Häiritusteooria abil leitud tulemus häiritusega harmoonilise ostsillaatori jaoks on mõnevõrra kaheldavam.
@@ -683,21 +684,26 @@ Tükiti lineaarse potentsiaali jaoks gravitatsiooniväljas õnnestus leida, et v
 Madalatel temperatuuridel leiti, et potentsiaali sümmeetrilisuse tõttu võib soojusmahtuvus nii tõusta kui ka langeda.
 Häiritusega harmoonilise ostsillaatori jaoks gravitatsiooniväljas ei leitud küll hästi analüüsitavat tulemust ja soojusmahtuvuse sõltuvus gravitatsioonist on kaheldav, kuid selle eest leiti täpne avaldis statistilise summa jaoks, millest pole raske jõuda soojusmahtuvuse avaldiseni.
 
-
-
 Kinnitust sai hüpotees, et on võimalik soojusmahtuvust nii suurendada kui ka vähendada.
 Hüpotees tugines varem leitud tulemustele kera soojusmahtuvuse kohta.
-Käesolevas töös käsitletud mudeli ja kera jaoks saadud tulemustes esines sarnasusi, kugi käesolevas töös olev mudel on keras oluliselt lihtsam.
+Käesolevas töös käsitletud mudeli ja kera jaoks saadud tulemustes esines sarnasusi, kuigi käesolevas töös olev mudel on kerast oluliselt lihtsam.
+Häiritusega harmoonilise ostsillaatori potentsiaalile vastava ja kera soojusmahtuvused ühtisid hästi.
+Tükati lineaarse potentsiaalile vastava ja kera soojusmahtuvuste vahel esines erinevusi ja sarnasusi.
 
 Tulemuste leidmine osutus ootamatult keeruliseks.
 On väga vähe potentsiaale, mille jaoks on Schrödingeri võrrand analüütiliselt lahenduv.
-Samuti on suhteliselt lihtsalte potentsiaalide jaoks ligikaudsete lahenduste leidmine küllaltki keeruline.
+Samuti on suhteliselt lihtsate potentsiaalide jaoks ligikaudsete lahenduste leidmine küllaltki keeruline.
 Autor ei leidnud ühtegi potentsiaali, milles oleks lineaarselt koordinaadist sõltuv osa ja mille jaoks soojusmahtuvus sõltuks gravitatsioonivälja tugevusest.
 
-Edaspidi tasuks uurida sama teemat teistsuguste potentsiaalide jaoks.
-Kõige lihtsam oleks ilmselt uurida potentsiaale, mis on analüütiliselt lahenduvad ilma gravitatsioonivälja komponendita, häirituse meetodil.
-Kuna töös kasutati ainult lähendusi soojusmahtuvuse sõltuvuse leidmiseks, siis tulemuste usaldusväärsust suurendaks mõne potentsiaali jaoks analüütilise lahendi leidmine Schrödingeri võrrandile.
-Samuti tasuks vaadata töös käsitletud harmoonilist ostsillaatorit teistsuguste häiritustega, mis ei tohiks olla väga keerline.
+Edaspidi tasuks uurida sama teemat, aga ka teistsuguste potentsiaalide jaoks.
+Tükati lineaarsele potentsiaalile saaks küllaltki lihtsalt juurde lisada tükke.
+Harmoonilise ostsillaatori jaoks võiks vaadata ka teisi häiritusi peale kuuphäirituse.
+Teistsugustest potentsiaalides võiks uurida näiteks tükati paraboolset või Morse'i potentsiaali, kuna need on suhteliselt lihtsad ja nende puhul võiks sõltuda soojusmahtuvus gravitatsiooniväljast.
+
+Peale selle võiks uurida ka ajast sõltuvaid potentsiaale mitmes dimensioonis.
+Sellised potentsiaalid vastaksid suuremale hulgale reaalselt eksisteerivatele osakeste süsteemidele.
+Sellistele süsteemidele pole ilmselt lootust analüütilisi lahendeid leida ja oleks koostada simulatsioon, kuigi tänapäevaste arvutitega poleks see ilmselt mõistlik.
+
 
 
 \printbibliography
@@ -719,7 +725,23 @@ Samuti tasuks vaadata töös käsitletud harmoonilist ostsillaatorit teistsugust
 \end{lstlisting}
 
 \addchap{Resümee}
+Gravitatsiooniväli mõjutab osakeste süsteemide ja kehade soojusmahtuvust.
+Käesolevas töös on leitud ligikaudsed seosed kahe erineva potentsiaali soojusmahtuvuse jaoks gravitatsiooniväljas.
+Uurimistöös kasutati mudelit, kus on üks ühes dimensioonis vabalt liikuv osake ja ülejäänud osakesed on fikseeritud.
+Käesolevas töös vaadati kuuphäiritusega kvantmehaanilise harmoonilise ostsillaatori potentsiaali häiritusteooria abil ja tükati lineaarset potentsiaali kvaasi-klassikaliselt.
+
+Tükati lineaarse potentsiaali jaoks leiti, et soojusmahtuvus võib nii langeda kui ka tõusta gravitatsioonivälja tugevuse suurenemisel.
+Kuuphäiritusega kvantmehaanilise harmoonilise ostsillaatori potentsiaali jaoks leiti valem soojusmahtuvuse jaoks, kuid lõplikku järeldust polnud võimalik teha.
+Saadud tulemusi võrreldi varasemalt uuritud kera soojusmahtuvusega gravitatsiooniväljas.
+Leiti, et kuigi süsteemid on mõnevõrra erinevad esineb süsteemide vahel olulisi sarnasusi.
+
+
 \addchap{Abstract}
+
+\textbf{\large Effect of gravity on the heat capacity of different quantum-mechanical systems}
+
+Translation in progress
+
 %\kinnitusleht
 
 \end{document}

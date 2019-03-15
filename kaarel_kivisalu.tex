@@ -68,7 +68,7 @@ Selle ülesande algses lahenduses leiti, et enamiku materjalide korral on horiso
 St, et tasandil oleva kera temperatuur on pärast soojushulga andmist väiksem.
 Hiljuti leiti Palma ja Sormani poolt, et algne lahendus rikub termodünaamika II seadust.
 Selle põhjuseks on see, et algses lahenduses ignoreeriti soojusmahtuvuse sõltuvust gravitatsioonivälja tugevusest ja arvati, et vabanev gravitatsiooniline energia muutub soojuseks.
-Nad pakkusid välja kaks alternatiivset lahendust, kasutades statistilist mehaanikat ja klassikalist termodünaamikat.
+Palma ja Sormani pakkusid välja kaks alternatiivset lahendust, kasutades statistilist mehaanikat ja klassikalist termodünaamikat.
 Mõlema lahendusega saadi samasugune seos kera soojusmahtuvuse ja lineaarse soojuspaisumisteguri vahel. %tulemus ja seoti omavahel kera soojusmahtuvuse ja lineaarse soojuspaisumisteguri.
 
 Käesolevas töös uuritakse konkreetsete potentsiaalide korral konstantse gravitatsioonvälja mõju kerale sarnase, kuid lihtsustatud süsteemi soojusmahtuvusele.
@@ -112,13 +112,13 @@ Analoogselt saadakse, et kera \(B\) soojusmahtuvus
 \begin{equation}
     C_B = C_0 - mg\alpha R.
 \end{equation}
-Enamiku materjalide korral on \(\alpha > 0\), millest tulenevalt \(C_A>C_B\). Järelikult on tavapärase lahenduse kohaselt kera \(A\) lõpptemperatuur madalam kera \(B\) lõpptemperatuurist.
+Enamiku materjalide korral on \(\alpha > 0\), millest tulenevalt \(C_A>C_B\). Järelikult on algse lahenduse kohaselt kera \(A\) lõpptemperatuur madalam kui kera \(B\) lõpptemperatuurist.
 
 \section{Algne lahendus rikub termodünaamika II seadust} \label{rikub}
 
 Palma ja Sormani\footcite[3-5]{palma15} leidsid, et algne lahendus rikub termodünaamika II seadust.
-Algses lahenduses kaudselt eeldati, et keha siseenergia \(U\) ja raadius \(R\) sõltuvad ainult temperatuurist \(T\), mitte aga raskuskiirendusest \(g\).
-Vaadeldakse järgnevat tsüklit: kera asub horisontaalsel külmal tasandil temperatuuriga \(T_1\); kera ühendatakse soojema reservuaariga, mille temperatuur \(T_2=T_1+\mathrm{d}T>T_1\); kera riputatakse nööri külge ja horisontaalne tasand eemaldatakse; kera ühendatakse külma reservuaariga, mille temperatuur on \(T_1\).
+Algses lahenduses kaudselt eeldati, et keha siseenergia \(U\) ja raadius \(R\) sõltuvad ainult temperatuurist \(T\), mitte aga gravitatsioonivälja tugevusest \(g\).
+Vaadeldakse järgnevat tsüklit: kera asub horisontaalsel külmal tasandil temperatuuriga \(T_1\); kera ühendatakse soojema reservuaariga, mille temperatuur \(T_2=T_1+\Delta T>T_1\); kera riputatakse nööri külge ja horisontaalne tasand eemaldatakse; kera ühendatakse külma reservuaariga, mille temperatuur on \(T_1\).
 Selle protsessi kasutegur on tehtud töö ja neeldunud soojushulga suhe ning avaldub kujul \parencite[3-5]{palma15}
 \begin{equation}
     \eta = \frac{2mg\alpha R}{C_0+mg\alpha R}.
@@ -155,7 +155,7 @@ Tihedusmaatriks on defineeritud järgnevalt \parencite[172]{kardar07}:
     \op{\rho}(t) \equiv \sum_j p_j \ket{\Psi_j(t)} \bra{\Psi_j(t)},
 \end{equation}
 kus $\sum_j p_j=1$, $p_j > 0$ ja $\ket{\Psi_j}$ on puhas kvantolek (ingl \textit{pure quantum state}).
-See kujutab segakvantolekut (ingl \textit{mixed quantum state}), kus tõenäosusega $p_j$ on süsteem puhtas kvantolekus $\ket{\Psi_j}$.
+Tihedusmaatriks kujutab segakvantolekut (ingl \textit{mixed quantum state}), kus tõenäosusega $p_j$ on süsteem puhtas kvantolekus $\ket{\Psi_j}$.
 Selles formalismis avaldub kvantmehaanilise operaatori ooteväärtuse ansambli keskväärtus järgnevalt \parencite[172]{kardar07}:
 \begin{equation}
     \overline{\braket{\op{O}}}=\tr(\op{\rho}\op{O}),
@@ -218,11 +218,11 @@ kus
 Valem \eqref{klassikalineimp} on klassikaline valem osakese impulsi arvutamiseks, mille koguenergia on $E$ ja potentsiaalse energia on $V(x)$.
 Piirkonnas, kus $E>V(x)$, on $p(x)$ reaalarvuline.
 Seda piirkonda kutsutakse \enquote{klassikaliseks}, kuna klassikaliselt on osake sulustatud selles piirkonnas.
-Üldiselt on $\psi$ kompleksfunktsioon, mida saab avaldada klassikalises piirkonnas amplituudi $A(x)$ ja faasi $\phi(x)$ kaudu, mis mõlemad on reaalarvulised \parencite[316]{griffiths05}:
+Üldiselt on $\psi (x)$ kompleksfunktsioon, mida saab avaldada klassikalises piirkonnas amplituudi $A(x)$ ja faasi $\phi(x)$ kaudu, mis mõlemad on reaalarvulised \parencite[316]{griffiths05}:
 \begin{equation}
     \psi(x)=A(x)\mathrm{e}^{\mathrm{i}\phi(x)}.
 \end{equation}
-Eeldades, et amplituud $A$ muutub aeglaselt\footnote{Täpsemalt eeldatakse, et $A''/A\ll(\phi ')^2$ ja $A''/A\ll p^2/\hbar^2$.}, avaldub lainefunktsioon klassikalises piirkonnas kujul \parencite[316-318]{griffiths05}
+Eeldades, et amplituud $A$ muutub aeglaselt,\footnote{Täpsemalt eeldatakse, et $A''/A\ll(\phi ')^2$ ja $A''/A\ll p^2/\hbar^2$.} avaldub lainefunktsioon klassikalises piirkonnas kujul \parencite[316-318]{griffiths05}
 \begin{equation}
     \psi(x) = \frac{C_1}{\sqrt{p(x)}}\exp\left(\frac{\mathrm{i}}{\hbar}\int p(x)\, \mathrm{d}x\right) +\frac{C_2}{\sqrt{p(x)}}\exp\left(-\frac{\mathrm{i}}{\hbar}\int p(x)\, dx\right),
     \label{eq:kvaasik1}
@@ -366,7 +366,7 @@ Kui $\beta c\ll 1$, siis saab summa asendada integraaliga ja $n+\frac{1}{2}\appr
 \end{equation}
 Võrrandist \eqref{mahtuvus} ja \eqref{linpart} saadakse, et
 \begin{equation} \label{intmahtuvus}
-    C=k_B T^2 \frac{\partial^2}{\partial \beta^2} \ln \frac{3\sqrt{\pi}}{4(\beta c)^\frac{3}{2}}=-k_BT^2\frac{\partial}{\partial \beta} \frac{3}{2\beta}=\frac{3k_B}{2}
+    C=k_B T^2 \frac{\partial^2}{\partial \beta^2} \ln \frac{3\sqrt{\pi}}{4(\beta c)^\frac{3}{2}}=-k_BT^2\frac{\partial}{\partial \beta} \frac{3}{2\beta}=\frac{3k_B}{2}.
 \end{equation}
 See tähendab, et kõrgetel temperatuuridel\footnote{$T\gg \frac{c}{k_B}$.} ei sõltu süsteemi soojusmahtuvus temperatuurist.
 Üldisemalt avaldub soojusmahtuvus võrranditest \eqref{mahtuvus} ja \eqref{linsum} järgnevalt:
@@ -376,8 +376,8 @@ See tähendab, et kõrgetel temperatuuridel\footnote{$T\gg \frac{c}{k_B}$.} ei s
     ={}&k_B T^2\frac{\partial}{\partial \beta}\frac{1}{Z} \sum_{n=0}^{\infty} \frac{\partial}{\partial \beta} \exp \left( -\beta c \left(n+\frac{1}{2}\right)^\frac{2}{3} \right) \nonumber \\
     ={}&k_B T^2\frac{\partial}{\partial \beta} \frac{\sum_{n=0}^{\infty} -c\left(n+\frac{1}{2}\right)^\frac{2}{3} \exp \left( -\beta c \left(n+\frac{1}{2}\right)^\frac{2}{3} \right)}{\sum_{n=0}^{\infty} \exp \left( -\beta c \left(n+\frac{1}{2}\right)^\frac{2}{3} \right)} \nonumber \\
     \begin{split}\label{mahsum}
-        ={}&k_B T^2 \frac{c^2 \sum_{n=0}^\infty \left( n+\frac{1}{2}\right)^\frac{4}{3} \exp \left( -c \left( n+\frac{1}{2} \right)^\frac{2}{3} \beta \right) }{\sum_{n=0}^\infty {{\exp}\left( -c {{\left( n+\frac{1}{2}\right) }^{\frac{2}{3}}} \beta \right)}}  \\
-        & - \frac{c^2 \left( \sum_{n=0}^{\infty }{{{\left( n+\frac{1}{2}\right) }^{\frac{2}{3}}} {{ \exp}\left( -c {{\left( n+\frac{1}{2}\right) }^{\frac{2}{3}}} \beta \right)}}\right)^{2}}{{{\left( \sum_{n=0}^{\infty }{ {{\exp}\left( -c {{\left( n+\frac{1}{2}\right) }^{\frac{2}{3}}} \beta \right)}}\right) }^{2}}}.
+        ={}&k_B T^2 \Bigg( \frac{c^2 \sum_{n=0}^\infty \left( n+\frac{1}{2}\right)^\frac{4}{3} \exp \left( -c \left( n+\frac{1}{2} \right)^\frac{2}{3} \beta \right) }{\sum_{n=0}^\infty {{\exp}\left( -c {{\left( n+\frac{1}{2}\right) }^{\frac{2}{3}}} \beta \right)}}  \\
+        & - \frac{c^2 \left( \sum_{n=0}^{\infty }{{{\left( n+\frac{1}{2}\right) }^{\frac{2}{3}}} {{ \exp}\left( -c {{\left( n+\frac{1}{2}\right) }^{\frac{2}{3}}} \beta \right)}}\right)^{2}}{{{\left( \sum_{n=0}^{\infty }{ {{\exp}\left( -c {{\left( n+\frac{1}{2}\right) }^{\frac{2}{3}}} \beta \right)}}\right) }^{2}}} \Bigg).
     \end{split}
 \end{align}
 Kui $\beta c \gtrsim 1$, siis avaldise \eqref{mahsum} väärtus on võimalik küllaltki heas lähenduses leida vaadates ainult summade esimesi liikmeid.\footnote{$\beta c =1$ jaoks piisab küllaltki hea täpsuse jaoks mõnesajast liikmest.}
@@ -739,18 +739,17 @@ Saadud tulemusi võrreldi varasemalt uuritud kera soojusmahtuvusega gravitatsioo
 Leiti, et kuigi süsteemid on mõnevõrra erinevad, esineb süsteemide vahel olulisi sarnasusi.
 
 
-\addchap{Abstract}
-
-\textbf{\large Effect of gravity on the heat capacity of different quantum-mechanical systems}
+\addchap{Abstract: Effect of gravity on the heat capacity of different quantum-mechanical systems}
+%\textbf{\large Effect of gravity on the heat capacity of different quantum-mechanical systems}
 
 Gravitational field affects the heat capacity of some quantum-mechanical systems.
-In this study approximate relationships was found for the heat capacity of two different quantum-mechanical systems in gravitational field.
+In this study, approximate relationships were found for the heat capacity of two different quantum-mechanical systems in the gravitational field.
 This study used a model with one free particle in one dimension and the rest of the particles fixed.
-In this study perturbed quantum harmonic oscillator was examined by the perturbation theory and partially linear potential was examined quasi-classically broken.
+In this study perturbed quantum harmonic oscillator was examined using the perturbation theory and partially linear potential was examined using the WKB(J) approximation.
 
-For the linear potential of the piece, it was found that the heat capacity can both decrease and increase as the strength of the gravity field increases.
-For the potential of a cubic-quantum mechanical harmonic oscillator, the formula was found for heat capacity, but no final conclusion could be drawn.
-The results obtained were compared with the heat capacity of the previously studied sphere in the gravitational field.
+For the partially linear potential, it was found that the heat capacity can both decrease and increase as the strength of the gravitational field increases.
+For the perturbed quantum harmonic oscillator, a formula for heat capacity was found but no final conclusion could be drawn.
+The results obtained were compared with the heat capacity of a sphere in the gravitational field that had been previously studied.
 It was found that although the systems are somewhat different, there are significant similarities between the systems.
 
 %\kinnitusleht
